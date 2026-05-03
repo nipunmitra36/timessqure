@@ -6,11 +6,11 @@ import ThemeToggle from "../theme/ThemeToggle";
 
 const navItems = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Location", href: "/location" },
-    { label: "Floor Plans", href: "/floor-plans" },
-    { label: "Investment", href: "/investment" },
-    { label: "Amenities", href: "/amenities" },
+    { label: "About", href: "#" },
+    { label: "Location", href: "#" },
+    { label: "Floor Plans", href: "#" },
+    { label: "Investment", href: "#" },
+    { label: "Amenities", href: "#" },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
 ];

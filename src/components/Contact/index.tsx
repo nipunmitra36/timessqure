@@ -134,6 +134,16 @@ function TextareaIcon({ children }: { children: React.ReactNode }) {
     );
 }
 
+// ── Button class helper (outside component to avoid TS narrowing issues) ─────
+
+function getSubmitButtonClass(state: SubmitState): string {
+    const base =
+        "relative mt-6 flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-xl px-6 py-[15px] font-[Montserrat] text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition-all duration-300";
+    if (state === "loading") return `${base} bg-[#b89a5e] pointer-events-none`;
+    if (state === "success") return `${base} bg-green-800 pointer-events-none`;
+    return `${base} bg-[#1a1612] hover:bg-[#b89a5e] hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(184,154,94,0.3)] active:scale-[0.98]`;
+}
+
 // ── Main component ───────────────────────────────────────────────────────────
 
 export default function ContactForm() {
@@ -187,7 +197,7 @@ export default function ContactForm() {
         if (!validate()) return;
         setSubmitState("loading");
 
-        // Replace this with your actual API call, e.g.:
+        // Replace with your actual API call, e.g.:
         // await fetch("/api/contact", { method: "POST", body: JSON.stringify(form) });
         await new Promise((res) => setTimeout(res, 1800));
 
@@ -460,6 +470,7 @@ export default function ContactForm() {
                             </div>
                         ) : (
                             /* ── Form pane ── */
+                            /* submitState is narrowed to "idle" | "loading" here */
                             <div className="p-7 sm:p-8 lg:p-9">
                                 <h3 className="cf-display mb-1 text-[1.4rem] font-semibold text-[#1a1612]">
                                     Send a Message
@@ -639,25 +650,14 @@ export default function ContactForm() {
                                     type="button"
                                     onClick={handleSubmit}
                                     disabled={submitState === "loading"}
-                                    className={[
-                                        "relative mt-6 flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-xl px-6 py-[15px] font-[Montserrat] text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition-all duration-300",
-                                        submitState === "loading"
-                                            ? "bg-[#b89a5e] pointer-events-none"
-                                            : submitState === "success"
-                                                ? "bg-green-800 pointer-events-none"
-                                                : "bg-[#1a1612] hover:bg-[#b89a5e] hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(184,154,94,0.3)] active:scale-[0.98]",
-                                    ].join(" ")}
+                                    className={getSubmitButtonClass(submitState)}
                                 >
                                     {submitState === "loading" && (
                                         <span className="cf-submit-shimmer pointer-events-none absolute inset-0" />
                                     )}
                                     {submitState === "loading" && <span className="cf-spinner" />}
                                     <span>
-                                        {submitState === "loading"
-                                            ? "Sending…"
-                                            : submitState === "success"
-                                                ? "Sent!"
-                                                : "Send Enquiry"}
+                                        {submitState === "loading" ? "Sending…" : "Send Enquiry"}
                                     </span>
                                     {submitState === "idle" && (
                                         <svg
