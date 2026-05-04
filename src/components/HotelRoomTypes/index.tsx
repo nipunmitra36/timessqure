@@ -248,7 +248,7 @@ export default function HotelRoomTypes() {
                                     className={`block h-px bg-[#EEA62A] origin-left ${inView ? "rt-lineGrow" : "opacity-0"}`}
                                     style={{ width: 36, animationDelay: "0.1s" }}
                                 />
-                                <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                                <span className="text-[#EEA62A] text-[16px] font-semibold tracking-[0.28em] uppercase">
                                     Accommodation
                                 </span>
                             </div>
@@ -260,7 +260,7 @@ export default function HotelRoomTypes() {
                                 <span className="rt-gold-text">Room Types</span>
                             </h2>
                             <p
-                                className={`text-gray-900 text-[13px] font-light tracking-wide mt-3 max-w-sm ${inView ? "rt-fadeUp" : "opacity-0"}`}
+                                className={`text-gray-900 text-[13px]  tracking-wide mt-3 max-w-sm ${inView ? "rt-fadeUp" : "opacity-0"}`}
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 26th – 31st Floor · 4 curated room categories
@@ -273,9 +273,9 @@ export default function HotelRoomTypes() {
                             style={{ animationDelay: "0.35s" }}
                         >
                             <span className="rt-display text-[#EEA62A] font-bold text-4xl leading-none">6</span>
-                            <span className="text-gray-900 text-[10px] font-semibold tracking-[0.2em] uppercase mt-1">Floors</span>
+                            <span className="text-gray-900 text-[12px] font-semibold tracking-[0.2em] uppercase mt-1">Floors</span>
                             <div className="w-8 h-px bg-[#EEA62A]/30 my-2" />
-                            <span className="text-gray-900 text-[10px] font-medium tracking-wide">26 – 31</span>
+                            <span className="text-gray-900 text-[12px] font-medium tracking-wide">26 – 31</span>
                         </div>
                     </div>
 
@@ -289,9 +289,9 @@ export default function HotelRoomTypes() {
                                 className={`flex items-center gap-2 mb-8 ${inView ? "rt-fadeIn" : "opacity-0"}`}
                                 style={{ animationDelay: "0.4s" }}
                             >
-                                <span className="text-[#b3a89e] text-[10px] font-semibold tracking-[0.2em] uppercase">Size Scale</span>
+                                <span className="text-[#b3a89e] text-[12px] font-semibold tracking-[0.2em] uppercase">Size Scale</span>
                                 <div className="flex-1 h-px bg-[#e8e0d8]" />
-                                <span className="text-[#b3a89e] text-[10px]">940 sft max</span>
+                                <span className="text-[#b3a89e] text-[12px]">940 sft max</span>
                             </div>
 
                             <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
@@ -359,7 +359,7 @@ export default function HotelRoomTypes() {
                                                     >
                                                         {room.size}
                                                     </span>
-                                                    <span className="text-[#a09080] text-[10px] font-medium tracking-wide">sft</span>
+                                                    <span className="text-[#a09080] text-[12px] font-medium tracking-wide">sft</span>
                                                 </div>
                                             </div>
 
@@ -367,7 +367,7 @@ export default function HotelRoomTypes() {
                                             <h3 className="rt-display text-[#1a1612] font-semibold text-[1.25rem] leading-tight mb-1">
                                                 {room.label}
                                             </h3>
-                                            <p className="text-gray-900 text-[11px] font-light italic mb-4">
+                                            <p className="text-gray-900 text-[12px]  italic mb-4">
                                                 {room.tagline}
                                             </p>
 
@@ -469,19 +469,19 @@ export default function HotelRoomTypes() {
                                             {active.label}
                                         </h3>
                                     </div>
-                                    <p className="text-gray-900 text-[11px] font-light italic mb-4">{active.tagline}</p>
+                                    <p className="text-gray-900 text-[12px]  italic mb-4">{active.tagline}</p>
 
                                     {/* Divider */}
                                     <div className="flex items-center gap-3 mb-5">
                                         <div className="h-px flex-1 bg-[#f0ebe4]" />
-                                        <span style={{ color: active.accent }} className="text-[10px] tracking-[0.2em] uppercase font-semibold">
+                                        <span style={{ color: active.accent }} className="text-[12px] tracking-[0.2em] uppercase font-semibold">
                                             Details
                                         </span>
                                         <div className="h-px flex-1 bg-[#f0ebe4]" />
                                     </div>
 
                                     {/* Description */}
-                                    <p className="text-[#5c524a] text-[13px] font-light leading-relaxed mb-6">
+                                    <p className="text-[#5c524a] text-[13px]  leading-relaxed mb-6">
                                         {active.description}
                                     </p>
 
@@ -490,7 +490,7 @@ export default function HotelRoomTypes() {
                                         <div className="rounded-xl bg-[#faf7f3] border border-[#f0ebe4] px-4 py-3">
                                             <span className="text-[#a09080] text-[9px] font-semibold tracking-[0.18em] uppercase block mb-1">Size</span>
                                             <span className="rt-display font-bold text-[1.4rem] text-[#1a1612]">{active.size}</span>
-                                            <span className="text-gray-900 text-[10px] ml-1">sft</span>
+                                            <span className="text-gray-900 text-[12px] ml-1">sft</span>
                                         </div>
                                         <div className="rounded-xl bg-[#faf7f3] border border-[#f0ebe4] px-4 py-3">
                                             <span className="text-[#a09080] text-[9px] font-semibold tracking-[0.18em] uppercase block mb-1">Floors</span>
@@ -505,7 +505,7 @@ export default function HotelRoomTypes() {
                                             {active.features.map((f) => (
                                                 <span
                                                     key={f}
-                                                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-semibold tracking-wide"
+                                                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-semibold tracking-wide"
                                                     style={{ background: `${active.accent}12`, color: active.accent }}
                                                 >
                                                     <span className="w-1 h-1 rounded-full inline-block" style={{ background: active.accent }} />
@@ -518,7 +518,7 @@ export default function HotelRoomTypes() {
                                     {/* CTA */}
                                     <a
                                         href="#contact"
-                                        className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl text-[11px] font-bold tracking-[0.16em] uppercase transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                                        className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl text-[12px] font-bold tracking-[0.16em] uppercase transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                                         style={{
                                             background: `linear-gradient(135deg, ${active.accent}, #8a6e3a)`,
                                             color: "#fff",
@@ -551,37 +551,7 @@ export default function HotelRoomTypes() {
                     </div>
 
                     {/* ── Bottom summary strip ── */}
-                    <div
-                        className={`mt-16 pt-10 border-t border-[#f0ebe4] ${inView ? "rt-fadeUp" : "opacity-0"}`}
-                        style={{ animationDelay: "1s" }}
-                    >
-                        <div className="flex flex-wrap items-center justify-between gap-6">
-                            <div className="flex flex-wrap gap-8">
-                                {roomTypes.map((r) => (
-                                    <button
-                                        key={r.id}
-                                        onClick={() => switchRoom(r.id)}
-                                        className="flex items-center gap-2.5 group"
-                                    >
-                                        <span
-                                            className="w-2 h-2 rounded-full flex-shrink-0 transition-all duration-300 group-hover:scale-150"
-                                            style={{ background: r.accent }}
-                                        />
-                                        <span className="text-gray-900 text-[11px] font-medium group-hover:text-[#1a1612] transition-colors duration-200">
-                                            {r.size} sft
-                                        </span>
-                                        <span className="text-[#c8bdb4] text-[11px]">·</span>
-                                        <span className="text-gray-900 text-[11px] font-light group-hover:text-[#6b5e52] transition-colors duration-200">
-                                            {r.type}
-                                        </span>
-                                    </button>
-                                ))}
-                            </div>
-                            <span className="text-[#c8bdb4] text-[11px] font-medium tracking-wide">
-                                Times Square, Tejgaon · Dhaka
-                            </span>
-                        </div>
-                    </div>
+                   
 
                 </div>
 

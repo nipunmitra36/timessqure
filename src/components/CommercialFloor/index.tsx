@@ -183,7 +183,7 @@ export default function CommercialFloor() {
                                 className={`block h-px bg-[#EEA62A] origin-left ${inView ? "cf-lineGrow" : "opacity-0"}`}
                                 style={{ width: 36, animationDelay: "0.1s" }}
                             />
-                            <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                            <span className="text-[#EEA62A] text-[16px] font-semibold tracking-[0.28em] uppercase">
                                 Floor Plans
                             </span>
                         </div>
@@ -197,7 +197,7 @@ export default function CommercialFloor() {
                                 <span className="cf-gold-text">Floor Spaces</span>
                             </h2>
                             <p
-                                className={`text-[#1a1612] font-light leading-relaxed max-w-sm text-[13px] lg:text-right ${inView ? "cf-fadeRight" : "opacity-0"}`}
+                                className={`text-[#1a1612]  leading-relaxed max-w-sm text-[13px] lg:text-right ${inView ? "cf-fadeRight" : "opacity-0"}`}
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 Flexible Grade-A commercial units designed for banks, corporate offices,
@@ -224,7 +224,7 @@ export default function CommercialFloor() {
                                 style={{ animationDelay: "0.35s" }}
                             >
                                 <HiOutlineOfficeBuilding size={14} className="text-[#EEA62A]" />
-                                <span className="text-[10px] font-semibold tracking-[0.2em] text-[#1a1612] uppercase">
+                                <span className="text-[12px] font-semibold tracking-[0.2em] text-[#1a1612] uppercase">
                                     Available Units
                                 </span>
                                 <span className="flex-1 h-px bg-[#1a1612]/8" />
@@ -254,7 +254,7 @@ export default function CommercialFloor() {
                                                 {f.icon}
                                             </span>
                                             <span
-                                                className={`text-[10px] font-semibold tracking-[0.14em] uppercase px-2.5 py-1 rounded-full
+                                                className={`text-[12px] font-semibold tracking-[0.14em] uppercase px-2.5 py-1 rounded-full
                           ${f.accent
                                                         ? "bg-[#EEA62A]/12 text-[#EEA62A]"
                                                         : "bg-[#1a1612]/6 text-[#1a1612]/40"
@@ -266,7 +266,7 @@ export default function CommercialFloor() {
 
                                         {/* Type name */}
                                         <div>
-                                            <p className="text-[#1a1612] text-[11px] font-medium tracking-[0.12em] uppercase mb-1">
+                                            <p className="text-[#1a1612] text-[12px] font-medium tracking-[0.12em] uppercase mb-1">
                                                 {f.type}
                                             </p>
                                             <div className="flex items-baseline gap-1.5">
@@ -284,7 +284,7 @@ export default function CommercialFloor() {
                                         {f.levels && (
                                             <div className="flex items-center gap-2">
                                                 <HiOutlineOfficeBuilding size={12} className="text-[#EEA62A] flex-shrink-0" />
-                                                <span className="text-[11px] text-[#1a1612] font-medium">{f.levels}</span>
+                                                <span className="text-[12px] text-[#1a1612] font-medium">{f.levels}</span>
                                             </div>
                                         )}
 
@@ -293,7 +293,7 @@ export default function CommercialFloor() {
                                             <div className="border-t border-[#1a1612]/6 pt-3 grid grid-cols-2 gap-2">
                                                 {f.breakdown.map((b) => (
                                                     <div key={b.label} className="bg-[#1a1612]/3 rounded-lg px-3 py-2">
-                                                        <p className="text-[10px] text-[#1a1612] font-medium mb-0.5">{b.label}</p>
+                                                        <p className="text-[12px] text-[#1a1612] font-medium mb-0.5">{b.label}</p>
                                                         <p className="text-[#1a1612] text-[12px] font-semibold">{b.value}</p>
                                                     </div>
                                                 ))}
@@ -313,14 +313,14 @@ export default function CommercialFloor() {
                             >
                                 <a
                                     href="/floor-plans"
-                                    className="flex-1 inline-flex items-center justify-center gap-2 bg-[#1a1612] hover:bg-[#2a2018] text-white text-[11px] font-semibold tracking-[0.16em] uppercase px-6 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5"
+                                    className="flex-1 inline-flex items-center justify-center gap-2 bg-[#1a1612] hover:bg-[#2a2018] text-white text-[12px] font-semibold tracking-[0.16em] uppercase px-6 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5"
                                 >
                                     Download Floor Plan →
                                 </a>
 
                                 <a
                                     href="/contact"
-                                    className="flex-1 inline-flex items-center justify-center gap-2 border border-[#EEA62A]/50 hover:border-[#EEA62A] text-[#EEA62A] text-[11px] font-semibold tracking-[0.16em] uppercase px-6 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EEA62A]/5"
+                                    className="flex-1 inline-flex items-center justify-center gap-2 border border-[#EEA62A]/50 hover:border-[#EEA62A] text-[#EEA62A] text-[12px] font-semibold tracking-[0.16em] uppercase px-6 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EEA62A]/5"
                                 >
                                     Book a Unit
                                 </a>
@@ -344,7 +344,7 @@ export default function CommercialFloor() {
                                 </div>
                                 {/* Label overlay */}
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1a1612]/70 to-transparent px-5 py-4">
-                                    <p className="text-white text-[11px] font-semibold tracking-[0.16em] uppercase flex items-center gap-2">
+                                    <p className="text-white text-[12px] font-semibold tracking-[0.16em] uppercase flex items-center gap-2">
                                         <span className="w-1.5 h-1.5 rounded-full bg-[#EEA62A]" />
                                         Typical Floor Plan
                                     </p>
@@ -366,14 +366,14 @@ export default function CommercialFloor() {
                                 </div>
                                 {/* Times Square badge */}
                                 <div className="absolute top-4 left-4">
-                                    <span className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-sm text-[#1a1612] text-[10px] font-bold tracking-[0.18em] uppercase px-3 py-1.5 rounded-full shadow-sm">
+                                    <span className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-sm text-[#1a1612] text-[12px] font-bold tracking-[0.18em] uppercase px-3 py-1.5 rounded-full shadow-sm">
                                         <span className="w-1.5 h-1.5 rounded-full bg-[#EEA62A]" />
                                         Times Square Lobby
                                     </span>
                                 </div>
                                 {/* Bottom overlay */}
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1a1612]/65 to-transparent px-5 py-4">
-                                    <p className="text-white/80 text-[11px] font-medium tracking-wide">
+                                    <p className="text-white/80 text-[12px] font-medium tracking-wide">
                                         5-Star Standard Common Lobby · Ground Floor
                                     </p>
                                 </div>
@@ -391,7 +391,7 @@ export default function CommercialFloor() {
                                 ].map((s) => (
                                     <div key={s.label} className="bg-[#faf9f7] px-4 py-4 text-center">
                                         <p className="cf-display text-[#EEA62A] font-bold text-xl leading-none mb-1">{s.value}</p>
-                                        <p className="text-[10px] text-[#1a1612] font-medium tracking-[0.1em] uppercase">{s.label}</p>
+                                        <p className="text-[12px] text-[#1a1612] font-medium tracking-[0.1em] uppercase">{s.label}</p>
                                     </div>
                                 ))}
                             </div>

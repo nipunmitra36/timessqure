@@ -212,7 +212,7 @@ export default function HotelShares() {
                                     className={`block h-px bg-[#EEA62A] origin-left ${inView ? "hs-lineGrow" : "opacity-0"}`}
                                     style={{ width: 36, animationDelay: "0.1s" }}
                                 />
-                                <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                                <span className="text-[#EEA62A] text-[16px] font-semibold tracking-[0.28em] uppercase">
                                     Investment
                                 </span>
                             </div>
@@ -224,7 +224,7 @@ export default function HotelShares() {
                                 <span className="hs-gold-text">Shares</span>
                             </h2>
                             <p
-                                className={`text-gray-900 text-[13px] font-light tracking-wide mt-3 max-w-md ${inView ? "hs-fadeUp" : "opacity-0"}`}
+                                className={`text-gray-900 text-[13px]  tracking-wide mt-3 max-w-md ${inView ? "hs-fadeUp" : "opacity-0"}`}
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 Own a share in a 5-star hotel. Three tiers of ownership — each with a fixed down-payment and 48-month EMI plan.
@@ -237,9 +237,9 @@ export default function HotelShares() {
                             style={{ animationDelay: "0.35s" }}
                         >
                             <span className="hs-display text-[#EEA62A] font-bold text-4xl leading-none">48</span>
-                            <span className="text-gray-900 text-[10px] font-semibold tracking-[0.2em] uppercase mt-1">EMI Months</span>
+                            <span className="text-gray-900 text-[12px] font-semibold tracking-[0.2em] uppercase mt-1">EMI Months</span>
                             <div className="w-8 h-px bg-[#EEA62A]/30 my-2" />
-                            <span className="text-gray-900 text-[10px] font-medium tracking-wide">Easy Installments</span>
+                            <span className="text-gray-900 text-[12px] font-medium tracking-wide">Easy Installments</span>
                         </div>
                     </div>
 
@@ -334,24 +334,24 @@ export default function HotelShares() {
                                             <div className="space-y-0 rounded-xl overflow-hidden border border-[#f0ebe4]">
                                                 {/* Downpayment */}
                                                 <div className="hs-row px-3.5 py-3 border-b border-[#f0ebe4]">
-                                                    <span className="text-[#a09080] text-[10px] font-medium tracking-wide block mb-0.5">
+                                                    <span className="text-[#a09080] text-[12px] font-medium tracking-wide block mb-0.5">
                                                         Downpayment
-                                                        <span className="text-[#c8bdb4] font-light ml-1">(One Time)</span>
+                                                        <span className="text-[#c8bdb4]  ml-1">(One Time)</span>
                                                     </span>
                                                     <div className="flex items-baseline gap-1">
                                                         <span className="text-gray-900 text-[10.5px]">BDT</span>
                                                         <span className="hs-display text-[#1a1612] font-bold text-[1.2rem] leading-tight">
                                                             <CountUp value={plan.downpayment} inView={inView} />
                                                         </span>
-                                                        <span className="text-gray-900 text-[11px]">/-</span>
+                                                        <span className="text-gray-900 text-[12px]">/-</span>
                                                     </div>
                                                 </div>
 
                                                 {/* EMI */}
                                                 <div className="hs-row px-3.5 py-3">
-                                                    <span className="text-[#a09080] text-[10px] font-medium tracking-wide block mb-0.5">
+                                                    <span className="text-[#a09080] text-[12px] font-medium tracking-wide block mb-0.5">
                                                         Installment
-                                                        <span className="text-[#c8bdb4] font-light ml-1">@ {plan.emiMonths} EMI</span>
+                                                        <span className="text-[#c8bdb4]  ml-1">@ {plan.emiMonths} EMI</span>
                                                     </span>
                                                     <div className="flex items-baseline gap-1">
                                                         <span className="text-gray-900 text-[10.5px]">BDT</span>
@@ -361,20 +361,20 @@ export default function HotelShares() {
                                                         >
                                                             <CountUp value={plan.emi} inView={inView} />
                                                         </span>
-                                                        <span className="text-gray-900 text-[11px]">/-</span>
+                                                        <span className="text-gray-900 text-[12px]">/-</span>
                                                         <span className="text-[#c8bdb4] text-[9.5px] ml-0.5">/ mo</span>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             {/* Description */}
-                                            <p className="text-gray-900 text-[10.5px] font-light leading-relaxed mt-4">
+                                            <p className="text-gray-900 text-[10.5px]  leading-relaxed mt-4">
                                                 {plan.description}
                                             </p>
 
                                             {/* CTA */}
                                             <button
-                                                className="hs-cta-btn w-full mt-5 py-3 rounded-xl text-[10px] font-bold tracking-[0.16em] uppercase transition-all duration-300"
+                                                className="hs-cta-btn w-full mt-5 py-3 rounded-xl text-[12px] font-bold tracking-[0.16em] uppercase transition-all duration-300"
                                                 style={
                                                     plan.highlight
                                                         ? {
@@ -405,7 +405,7 @@ export default function HotelShares() {
                                     className="w-1.5 h-1.5 rounded-full flex-shrink-0"
                                     style={{ background: "#EEA62A" }}
                                 />
-                                <p className="text-[#a09080] text-[11px] font-light leading-relaxed">
+                                <p className="text-[#a09080] text-[12px]  leading-relaxed">
                                     All prices in BDT. EMI plans subject to agreement. Downpayment is one-time and non-refundable.
                                     Hotel share ownership entitles the investor to proportional returns as per management contract.
                                 </p>
@@ -429,14 +429,14 @@ export default function HotelShares() {
                                 <div className="absolute bottom-4 left-4 right-4">
                                     <div className="backdrop-blur-sm bg-black/40 rounded-xl px-4 py-3 flex items-center justify-between">
                                         <div>
-                                            <span className="text-white/50 text-[9px] font-semibold tracking-[0.2em] uppercase block">
+                                            <span className="text-white text-[9px] font-semibold tracking-[0.2em] uppercase block">
                                                 Times Square
                                             </span>
                                             <span className="text-white text-[12px] font-semibold tracking-wide">
-                                                5-Star Hotel · Tejgaon
+                                                5-Star Hotel · Kakrail
                                             </span>
                                         </div>
-                                        <span className="text-[#EEA62A] text-[11px] font-bold tracking-wide">26–31F</span>
+                                        <span className="text-[#EEA62A] text-[12px] font-bold tracking-wide">26–31F</span>
                                     </div>
                                 </div>
                             </div>
@@ -457,7 +457,7 @@ export default function HotelShares() {
                                     {[
                                         { label: "Guaranteed Returns", note: "Professional hotel management" },
                                         { label: "Flexible EMI Plan", note: "48-month easy installments" },
-                                        { label: "Prime Location", note: "Tejgaon commercial hub" },
+                                        { label: "Prime Location", note: "Kakrail commercial hub" },
                                         { label: "5-Star Standards", note: "International hospitality brand" },
                                     ].map((item, i) => (
                                         <div
@@ -471,8 +471,8 @@ export default function HotelShares() {
                                                 {i + 1}
                                             </span>
                                             <div>
-                                                <p className="text-[#1a1612] text-[11px] font-semibold leading-tight">{item.label}</p>
-                                                <p className="text-gray-900 text-[10px] font-light mt-0.5">{item.note}</p>
+                                                <p className="text-[#1a1612] text-[12px] font-semibold leading-tight">{item.label}</p>
+                                                <p className="text-gray-900 text-[12px]  mt-0.5">{item.note}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -482,7 +482,7 @@ export default function HotelShares() {
                             {/* Main CTA */}
                             <a
                                 href="#contact"
-                                className="hs-cta-btn w-full flex items-center justify-center gap-2 py-4 rounded-xl text-[11px] font-bold tracking-[0.18em] uppercase"
+                                className="hs-cta-btn w-full flex items-center justify-center gap-2 py-4 rounded-xl text-[12px] font-bold tracking-[0.18em] uppercase"
                                 style={{
                                     background: "linear-gradient(135deg, #EEA62A, #8a6e3a)",
                                     color: "#fff",
@@ -507,14 +507,14 @@ export default function HotelShares() {
                                         className="w-2 h-2 rounded-full flex-shrink-0"
                                         style={{ background: p.accent }}
                                     />
-                                    <span className="text-gray-900 text-[11px] font-medium">{p.label}</span>
-                                    <span className="text-[#c8bdb4] text-[11px]">·</span>
-                                    <span className="text-[#b3a89e] text-[11px] font-light">BDT {p.totalPrice}/-</span>
+                                    <span className="text-gray-900 text-[12px] font-medium">{p.label}</span>
+                                    <span className="text-[#c8bdb4] text-[12px]">·</span>
+                                    <span className="text-[#b3a89e] text-[12px] ">BDT {p.totalPrice}/-</span>
                                 </div>
                             ))}
                         </div>
-                        <span className="text-[#c8bdb4] text-[11px] tracking-wide">
-                            Times Square · Tejgaon, Dhaka
+                        <span className="text-[#c8bdb4] text-[12px] tracking-wide">
+                            Times Square · Kakrail, Dhaka
                         </span>
                     </div>
 

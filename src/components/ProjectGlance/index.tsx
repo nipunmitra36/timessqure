@@ -73,7 +73,7 @@ const stats = [
   { value: "32", unit: "Storeys", label: "Iconic Tower", icon: <TbBuildingSkyscraper size={20} /> },
   { value: "20", unit: "Kathas", label: "Prime Land", icon: <HiOutlineLocationMarker size={20} /> },
   { value: "5★", unit: "Hotel", label: "26th–31st Floor", icon: <MdOutlineHotel size={20} /> },
-  { value: "2", unit: "Partners", label: "Joint Venture", icon: <BsBuildingCheck size={20} /> },
+  { value: "3", unit: "Partners", label: "Joint Venture", icon: <BsBuildingCheck size={20} /> },
 ];
 
 function useInView(threshold = 0.1) {
@@ -172,7 +172,7 @@ export default function ProjectGlance() {
                 className={`block h-px bg-[#EEA62A] origin-left ${inView ? "animate-lineGrow" : "opacity-0"}`}
                 style={{ width: 40, animationDelay: "0.2s" }}
               />
-              <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.25em] uppercase">
+              <span className="text-[#EEA62A] text-[16px] font-semibold tracking-[0.25em] uppercase">
                 Project at a Glance
               </span>
             </div>
@@ -188,10 +188,10 @@ export default function ProjectGlance() {
             </h2>
 
             <p
-              className={`text-white/55 font-light leading-[1.85] max-w-2xl ${inView ? "animate-fadeUp" : "opacity-0"}`}
+              className={`text-white/55  leading-[1.85] max-w-2xl ${inView ? "animate-fadeUp" : "opacity-0"}`}
               style={{ fontSize: "clamp(13px,1.2vw,15px)", animationDelay: "0.4s" }}
             >
-              Times Square, Tejgaon is a bold new landmark of architectural innovation and
+              Times Square, Kakrail is a bold new landmark of architectural innovation and
               commercial excellence in the heart of Dhaka. Strategically located opposite the
               Roads &amp; Highways Department office, this iconic 32-storey tower rises on{" "}
               <span className="text-[#EEA62A] font-medium">20 kathas of prime land</span> — and
@@ -215,7 +215,7 @@ export default function ProjectGlance() {
                   {s.value}
                   <span className="text-[55%] ml-1 #EEA62A">{s.unit}</span>
                 </span>
-                <span className="text-white text-[11px] font-medium tracking-[0.12em] uppercase">
+                <span className="text-white text-[12px] font-medium tracking-[0.12em] uppercase">
                   {s.label}
                 </span>
               </div>
@@ -228,7 +228,7 @@ export default function ProjectGlance() {
             style={{ animationDelay: "0.6s" }}
           >
             <div className="flex items-center gap-3 mb-8">
-              <span className="text-white/30 text-[10px] font-semibold tracking-[0.2em] uppercase">
+              <span className="text-white text-[12px] font-semibold tracking-[0.2em] uppercase">
                 Floor Breakdown
               </span>
               <span className="flex-1 h-px bg-white/8" />
@@ -247,7 +247,7 @@ export default function ProjectGlance() {
                   </span>
 
                   {/* Floor badge */}
-                  <span className="inline-flex self-start items-center px-2.5 py-1 bg-[#EEA62A]/10 border border-[#EEA62A]/25 text-[#EEA62A] text-[10px] font-semibold tracking-[0.14em] uppercase rounded-sm">
+                  <span className="inline-flex self-start items-center px-2.5 py-1 bg-[#EEA62A]/10 border border-[#EEA62A]/25 text-[#EEA62A] text-[12px] font-semibold tracking-[0.14em] uppercase rounded-sm">
                     {floor.floors}
                   </span>
 
@@ -257,7 +257,7 @@ export default function ProjectGlance() {
                   </p>
 
                   {/* Detail */}
-                  <p className="text-white text-[12px] font-light leading-relaxed flex-1">
+                  <p className="text-white text-[12px]  leading-relaxed flex-1">
                     {floor.detail}
                   </p>
 
@@ -276,7 +276,7 @@ export default function ProjectGlance() {
 
                 <div className="relative z-10 flex items-center gap-2 text-[#1a1612]/70">
                   <FaRegBuilding size={18} />
-                  <span className="text-[10px] font-semibold tracking-[0.15em] uppercase">
+                  <span className="text-[12px] font-semibold tracking-[0.15em] uppercase">
                     Times Square
                   </span>
                 </div>
@@ -290,7 +290,7 @@ export default function ProjectGlance() {
 
                 <a
                   href="/book"
-                  className="relative z-10 inline-flex items-center gap-2 bg-[#1a1612] text-[#EEA62A] text-[11px] font-semibold tracking-[0.14em] uppercase px-4 py-2.5 rounded-sm self-start transition-all duration-200 hover:bg-[#2a2018]"
+                  className="relative z-10 inline-flex items-center gap-2 bg-[#1a1612] text-[#EEA62A] text-[12px] font-semibold tracking-[0.14em] uppercase px-4 py-2.5 rounded-sm self-start transition-all duration-200 hover:bg-[#2a2018]"
                 >
                   Book Now →
                 </a>
@@ -299,7 +299,7 @@ export default function ProjectGlance() {
           </div>
 
           {/* ── Footer strip ── */}
-         
+
 
         </div>
 

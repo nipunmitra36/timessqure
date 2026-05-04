@@ -138,7 +138,7 @@ function TextareaIcon({ children }: { children: React.ReactNode }) {
 
 function getSubmitButtonClass(state: SubmitState): string {
     const base =
-        "relative mt-6 flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-xl px-6 py-[15px] font-[Montserrat] text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition-all duration-300";
+        "relative mt-6 flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-xl px-6 py-[15px] font-[Montserrat] text-[12px] font-semibold uppercase tracking-[0.22em] text-white transition-all duration-300";
     if (state === "loading") return `${base} bg-[#EEA62A] pointer-events-none`;
     if (state === "success") return `${base} bg-green-800 pointer-events-none`;
     return `${base} bg-[#1a1612] hover:bg-[#EEA62A] hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(184,154,94,0.3)] active:scale-[0.98]`;
@@ -222,7 +222,7 @@ export default function ContactForm() {
             .join(" ");
 
     const inputClass =
-        "w-full rounded-[11px] border border-[#e8e2da] bg-[#faf8f5] pl-10 pr-4 py-[11px] font-[Montserrat] text-[12.5px] text-[#1a1612] outline-none transition-all duration-200 placeholder:text-[#c5bdb7] placeholder:font-light focus:border-[rgba(184,154,94,0.6)] focus:bg-white focus:shadow-[0_0_0_3px_rgba(184,154,94,0.1)]";
+        "w-full rounded-[11px] border border-[#e8e2da] bg-[#faf8f5] pl-10 pr-4 py-[11px] font-[Montserrat] text-[12.5px] text-[#1a1612] outline-none transition-all duration-200 placeholder:text-[#c5bdb7] placeholder: focus:border-[rgba(184,154,94,0.6)] focus:bg-white focus:shadow-[0_0_0_3px_rgba(184,154,94,0.1)]";
 
     return (
         <>
@@ -350,7 +350,7 @@ export default function ContactForm() {
                                 className={`block h-px w-9 bg-[#EEA62A] origin-left ${inView ? "cf-animate-lineGrow" : "opacity-0"}`}
                                 style={{ animationDelay: "0.08s" }}
                             />
-                            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#EEA62A]">
+                            <span className="text-[12px] font-semibold uppercase tracking-[0.28em] text-[#EEA62A]">
                                 Send an Enquiry
                             </span>
                         </div>
@@ -368,7 +368,7 @@ export default function ContactForm() {
 
                         {/* Description */}
                         <p
-                            className={`mt-4 max-w-[300px] text-[12px] font-light leading-relaxed tracking-wide text-gray-900 ${inView ? "cf-animate-fadeUp" : "opacity-0"}`}
+                            className={`mt-4 max-w-[300px] text-[12px]  leading-relaxed tracking-wide text-gray-900 ${inView ? "cf-animate-fadeUp" : "opacity-0"}`}
                             style={{ animationDelay: "0.25s" }}
                         >
                             Whether you&apos;re exploring a commercial space, a hospitality partnership,
@@ -425,7 +425,7 @@ export default function ContactForm() {
                                 </span>
                             </div>
                             <p className="text-[12px] font-medium text-[#1a1612]">9:00 AM – 6:00 PM</p>
-                            <p className="text-[10px] text-gray-900">Sunday – Thursday</p>
+                            <p className="text-[12px] text-gray-900">Sunday – Thursday</p>
                         </div>
                     </div>
 
@@ -703,13 +703,13 @@ export default function ContactForm() {
                         <div className="flex flex-wrap items-center gap-5 border-t border-[#f5f0eb] bg-[#fdf9f3] px-7 py-5">
                             <div className="flex items-center gap-2">
                                 <span className="h-[6px] w-[6px] rounded-full bg-green-500" />
-                                <span className="text-[10px] text-gray-900">Response time:</span>
-                                <span className="text-[10px] font-medium text-[#1a1612]">1–2 Business Days</span>
+                                <span className="text-[12px] text-gray-900">Response time:</span>
+                                <span className="text-[12px] font-medium text-[#1a1612]">1–2 Business Days</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <span className="h-[6px] w-[6px] rounded-full bg-[#EEA62A]" />
-                                <span className="text-[10px] text-gray-900">Hours:</span>
-                                <span className="text-[10px] font-medium text-[#1a1612]">Sun–Thu, 9 AM–6 PM</span>
+                                <span className="text-[12px] text-gray-900">Hours:</span>
+                                <span className="text-[12px] font-medium text-[#1a1612]">Sun–Thu, 9 AM–6 PM</span>
                             </div>
                         </div>
                     </div>
