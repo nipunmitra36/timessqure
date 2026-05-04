@@ -89,7 +89,7 @@ function HighlightText({ text, keyword }: { text: string; keyword: string }) {
     return (
         <>
             {text.slice(0, idx)}
-            <span className="text-[#b89a5e] font-semibold">{text.slice(idx, idx + keyword.length)}</span>
+            <span className="text-[#EEA62A] font-semibold">{text.slice(idx, idx + keyword.length)}</span>
             {text.slice(idx + keyword.length)}
         </>
     );
@@ -147,7 +147,7 @@ export default function HotelRooms() {
         .hr-cardIn    { animation: hr-cardIn    0.75s cubic-bezier(0.34,1.2,0.64,1) both; }
 
         .hr-gold-text {
-          background: linear-gradient(90deg,#b89a5e 0%,#e8d5a3 45%,#b89a5e 60%,#8a6e3a 100%);
+          background: linear-gradient(90deg,#EEA62A 0%,#e8d5a3 45%,#EEA62A 60%,#8a6e3a 100%);
           background-size:200% auto;
           -webkit-background-clip:text;
           -webkit-text-fill-color:transparent;
@@ -210,7 +210,7 @@ export default function HotelRooms() {
                 </div>
 
                 {/* Top border glow */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[2px] z-10 bg-gradient-to-r from-transparent via-[#b89a5e]/50 to-transparent" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[2px] z-10 bg-gradient-to-r from-transparent via-[#EEA62A]/50 to-transparent" />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-24 lg:py-36">
 
@@ -221,14 +221,14 @@ export default function HotelRooms() {
                             style={{ animationDelay: "0.05s" }}
                         >
                             <span
-                                className={`block h-px bg-[#b89a5e] origin-left ${inView ? "hr-lineGrow" : "opacity-0"}`}
+                                className={`block h-px bg-[#EEA62A] origin-left ${inView ? "hr-lineGrow" : "opacity-0"}`}
                                 style={{ width: 32, animationDelay: "0.1s" }}
                             />
-                            <span className="text-[#b89a5e] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                            <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
                                 26th – 31st Floor
                             </span>
                             <span
-                                className={`block h-px bg-[#b89a5e] origin-right ${inView ? "hr-lineGrow" : "opacity-0"}`}
+                                className={`block h-px bg-[#EEA62A] origin-right ${inView ? "hr-lineGrow" : "opacity-0"}`}
                                 style={{ width: 32, animationDelay: "0.1s", transformOrigin: "right" }}
                             />
                         </div>
@@ -261,7 +261,7 @@ export default function HotelRooms() {
                             {/* Floating "Hotel Times Square" badge */}
                             <div className="hr-float absolute -top-5 right-4 sm:right-8 z-20">
                                 <div className="hr-glass rounded-full px-4 py-2 flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-[#b89a5e] animate-pulse" />
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#EEA62A] animate-pulse" />
                                     <span className="text-white/80 text-[10px] font-semibold tracking-[0.2em] uppercase">
                                         Hotel Times Square
                                     </span>
@@ -273,13 +273,13 @@ export default function HotelRooms() {
                                 {/* Card header */}
                                 <div className="text-center mb-8">
                                     <div className="inline-flex items-center gap-2 mb-3">
-                                        <span className="h-px w-8 bg-[#b89a5e]/50" />
-                                        <span className="text-[#b89a5e] text-[10px] font-semibold tracking-[0.22em] uppercase">
+                                        <span className="h-px w-8 bg-[#EEA62A]/50" />
+                                        <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.22em] uppercase">
                                             Types of Rooms
                                         </span>
-                                        <span className="h-px w-8 bg-[#b89a5e]/50" />
+                                        <span className="h-px w-8 bg-[#EEA62A]/50" />
                                     </div>
-                                    <p className="text-white/35 text-[12px] font-light tracking-wide">
+                                    <p className="text-white text-[12px] font-light tracking-wide">
                                         Select your preferred room category
                                     </p>
                                 </div>
@@ -292,27 +292,27 @@ export default function HotelRooms() {
                                             onClick={() => setActiveRoom(i)}
                                             className={`hr-room-card group relative flex flex-col items-center gap-3 p-4 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer
                         ${activeRoom === i
-                                                    ? "active border-[#b89a5e]/60 bg-[#b89a5e]/8"
+                                                    ? "active border-[#EEA62A]/60 bg-[#EEA62A]/8"
                                                     : "border-white/12 bg-white/5 hover:border-white/25 hover:bg-white/8"
                                                 }`}
                                         >
                                             {/* Active indicator */}
                                             {activeRoom === i && (
-                                                <span className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-[#b89a5e]" />
+                                                <span className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-[#EEA62A]" />
                                             )}
 
                                             {/* Icon */}
-                                            <span className={`transition-colors duration-300 ${activeRoom === i ? "text-[#b89a5e]" : "text-white/50 group-hover:text-white/75"}`}>
+                                            <span className={`transition-colors duration-300 ${activeRoom === i ? "text-[#EEA62A]" : "text-white/50 group-hover:text-white/75"}`}>
                                                 {room.icon()}
                                             </span>
 
                                             {/* Name */}
-                                            <span className={`text-center text-[11px] sm:text-[12px] font-semibold leading-tight transition-colors duration-300 ${activeRoom === i ? "text-[#b89a5e]" : "text-white/65 group-hover:text-white/85"}`}>
+                                            <span className={`text-center text-[11px] sm:text-[12px] font-semibold leading-tight transition-colors duration-300 ${activeRoom === i ? "text-[#EEA62A]" : "text-white/65 group-hover:text-white/85"}`}>
                                                 {room.name}
                                             </span>
 
                                             {/* Tag */}
-                                            <span className={`text-[9px] font-medium tracking-[0.1em] uppercase transition-colors duration-300 ${activeRoom === i ? "text-[#b89a5e]/70" : "text-white/25"}`}>
+                                            <span className={`text-[9px] font-medium tracking-[0.1em] uppercase transition-colors duration-300 ${activeRoom === i ? "text-[#EEA62A]/70" : "text-white/25"}`}>
                                                 {room.tag}
                                             </span>
                                         </button>
@@ -322,9 +322,9 @@ export default function HotelRooms() {
                                 {/* Stars row */}
                                 <div className="flex items-center justify-center gap-1.5 mt-7 pt-6 border-t border-white/8">
                                     {[...Array(5)].map((_, i) => (
-                                        <BsStarFill key={i} size={10} className="text-[#b89a5e]" />
+                                        <BsStarFill key={i} size={10} className="text-[#EEA62A]" />
                                     ))}
-                                    <span className="text-white/35 text-[11px] font-medium ml-2 tracking-wide">
+                                    <span className="text-white text-[11px] font-medium ml-2 tracking-wide">
                                         Premium 5-Star Experience
                                     </span>
                                 </div>
@@ -338,7 +338,7 @@ export default function HotelRooms() {
                                     { value: "3", sub: "Room Types", label: "Available" },
                                 ].map((s) => (
                                     <div key={s.label} className="hr-glass-dark rounded-xl px-3 py-4 text-center">
-                                        <p className="hr-display text-[#b89a5e] font-bold text-xl leading-none mb-0.5">
+                                        <p className="hr-display text-[#EEA62A] font-bold text-xl leading-none mb-0.5">
                                             {s.value}
                                         </p>
                                         <p className="text-white/55 text-[10px] font-medium">{s.sub}</p>
@@ -355,7 +355,7 @@ export default function HotelRooms() {
                         >
                             {/* Section label */}
                             <div className="flex items-center gap-3 mb-7">
-                                <span className="text-[#b89a5e] text-[10px] font-semibold tracking-[0.22em] uppercase">
+                                <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.22em] uppercase">
                                     Investor Benefits
                                 </span>
                                 <span className="flex-1 h-px bg-white/10" />
@@ -370,7 +370,7 @@ export default function HotelRooms() {
                                         style={{ animationDelay: `${0.5 + i * 0.1}s` }}
                                     >
                                         {/* Icon bubble */}
-                                        <span className="flex-shrink-0 w-9 h-9 rounded-xl bg-[#b89a5e]/12 border border-[#b89a5e]/20 flex items-center justify-center text-[#b89a5e]">
+                                        <span className="flex-shrink-0 w-9 h-9 rounded-xl bg-[#EEA62A]/12 border border-[#EEA62A]/20 flex items-center justify-center text-[#EEA62A]">
                                             {b.icon}
                                         </span>
 
@@ -380,7 +380,7 @@ export default function HotelRooms() {
                                         </p>
 
                                         {/* Check */}
-                                        <BsCheckCircle size={14} className="flex-shrink-0 text-[#b89a5e]/50 mt-1" />
+                                        <BsCheckCircle size={14} className="flex-shrink-0 text-[#EEA62A]/50 mt-1" />
                                     </div>
                                 ))}
                             </div>
@@ -389,14 +389,14 @@ export default function HotelRooms() {
                             <div className="flex flex-col sm:flex-row gap-3 mt-8">
                                 <a
                                     href="/investment"
-                                    className="flex-1 inline-flex items-center justify-center gap-2 bg-[#b89a5e] hover:bg-[#d4b87a] text-[#1a1612] text-[11px] font-bold tracking-[0.16em] uppercase px-6 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5"
+                                    className="flex-1 inline-flex items-center justify-center gap-2 bg-[#EEA62A] hover:bg-[#d4b87a] text-[#1a1612] text-[11px] font-bold tracking-[0.16em] uppercase px-6 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5"
                                 >
                                     View Investment Details →
                                 </a>
 
                                 <a
                                     href="/book"
-                                    className="flex-1 inline-flex items-center justify-center gap-2 border border-white/20 hover:border-[#b89a5e]/60 text-white/70 hover:text-[#b89a5e] text-[11px] font-semibold tracking-[0.14em] uppercase px-6 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5"
+                                    className="flex-1 inline-flex items-center justify-center gap-2 border border-white/20 hover:border-[#EEA62A]/60 text-white/70 hover:text-[#EEA62A] text-[11px] font-semibold tracking-[0.14em] uppercase px-6 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5"
                                 >
                                     Book a Hotel Share
                                 </a>
@@ -407,7 +407,7 @@ export default function HotelRooms() {
                 {/* </div> */}
 
                 {/* Bottom border glow */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[1px] z-10 bg-gradient-to-r from-transparent via-[#b89a5e]/40 to-transparent" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[1px] z-10 bg-gradient-to-r from-transparent via-[#EEA62A]/40 to-transparent" />
             </section>
         </>
     );

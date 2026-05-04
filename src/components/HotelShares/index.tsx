@@ -22,8 +22,8 @@ const plans = [
         label: "Deluxe Room",
         badge: "Popular",
         icon: "▲",
-        accent: "#b89a5e",
-        accentLight: "#b89a5e20",
+        accent: "#EEA62A",
+        accentLight: "#EEA62A20",
         totalPrice: "7,50,000",
         downpayment: "2,70,000",
         emi: "10,000",
@@ -133,7 +133,7 @@ export default function HotelShares() {
         .hs-imgReveal{ animation: hs-imgReveal 0.9s ease both; }
 
         .hs-gold-text {
-          background: linear-gradient(90deg, #b89a5e 0%, #e8d5a3 45%, #b89a5e 60%, #8a6e3a 100%);
+          background: linear-gradient(90deg, #EEA62A 0%, #e8d5a3 45%, #EEA62A 60%, #8a6e3a 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -193,11 +193,11 @@ export default function HotelShares() {
                 <div
                     className="absolute inset-0 pointer-events-none opacity-[0.03]"
                     style={{
-                        backgroundImage: "radial-gradient(circle, #b89a5e 1px, transparent 1px)",
+                        backgroundImage: "radial-gradient(circle, #EEA62A 1px, transparent 1px)",
                         backgroundSize: "28px 28px",
                     }}
                 />
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b89a5e]/30 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#EEA62A]/30 to-transparent" />
 
                 <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
@@ -209,10 +209,10 @@ export default function HotelShares() {
                                 style={{ animationDelay: "0.05s" }}
                             >
                                 <span
-                                    className={`block h-px bg-[#b89a5e] origin-left ${inView ? "hs-lineGrow" : "opacity-0"}`}
+                                    className={`block h-px bg-[#EEA62A] origin-left ${inView ? "hs-lineGrow" : "opacity-0"}`}
                                     style={{ width: 36, animationDelay: "0.1s" }}
                                 />
-                                <span className="text-[#b89a5e] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                                <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
                                     Investment
                                 </span>
                             </div>
@@ -224,7 +224,7 @@ export default function HotelShares() {
                                 <span className="hs-gold-text">Shares</span>
                             </h2>
                             <p
-                                className={`text-[#6b6259] text-[13px] font-light tracking-wide mt-3 max-w-md ${inView ? "hs-fadeUp" : "opacity-0"}`}
+                                className={`text-gray-900 text-[13px] font-light tracking-wide mt-3 max-w-md ${inView ? "hs-fadeUp" : "opacity-0"}`}
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 Own a share in a 5-star hotel. Three tiers of ownership — each with a fixed down-payment and 48-month EMI plan.
@@ -233,13 +233,13 @@ export default function HotelShares() {
 
                         {/* EMI callout */}
                         <div
-                            className={`inline-flex flex-col items-center justify-center border border-[#b89a5e]/30 rounded-2xl px-8 py-5 bg-gradient-to-br from-[#fdf9f3] to-white ${inView ? "hs-fadeIn" : "opacity-0"}`}
+                            className={`inline-flex flex-col items-center justify-center border border-[#EEA62A]/30 rounded-2xl px-8 py-5 bg-gradient-to-br from-[#fdf9f3] to-white ${inView ? "hs-fadeIn" : "opacity-0"}`}
                             style={{ animationDelay: "0.35s" }}
                         >
-                            <span className="hs-display text-[#b89a5e] font-bold text-4xl leading-none">48</span>
-                            <span className="text-dark text-[10px] font-semibold tracking-[0.2em] uppercase mt-1">EMI Months</span>
-                            <div className="w-8 h-px bg-[#b89a5e]/30 my-2" />
-                            <span className="text-dark text-[10px] font-medium tracking-wide">Easy Installments</span>
+                            <span className="hs-display text-[#EEA62A] font-bold text-4xl leading-none">48</span>
+                            <span className="text-gray-900 text-[10px] font-semibold tracking-[0.2em] uppercase mt-1">EMI Months</span>
+                            <div className="w-8 h-px bg-[#EEA62A]/30 my-2" />
+                            <span className="text-gray-900 text-[10px] font-medium tracking-wide">Easy Installments</span>
                         </div>
                     </div>
 
@@ -256,8 +256,8 @@ export default function HotelShares() {
                                         onMouseLeave={() => setHovered(null)}
                                         className={`hs-card relative rounded-2xl border overflow-hidden bg-white
                       ${plan.highlight
-                                                ? "border-[#b89a5e]/60 shadow-[0_16px_60px_rgba(184,154,94,0.18)] hs-highlight"
-                                                : "border-[#e8e2da] hover:border-[#b89a5e]/30 hover:shadow-[0_8px_30px_rgba(184,154,94,0.1)]"
+                                                ? "border-[#EEA62A]/60 shadow-[0_16px_60px_rgba(184,154,94,0.18)] hs-highlight"
+                                                : "border-[#e8e2da] hover:border-[#EEA62A]/30 hover:shadow-[0_8px_30px_rgba(184,154,94,0.1)]"
                                             }
                       ${inView ? "hs-fadeUp" : "opacity-0"}
                     `}
@@ -315,18 +315,18 @@ export default function HotelShares() {
 
                                             {/* Total Price — big hero number */}
                                             <div className="mb-5 pb-5 border-b border-[#f0ebe4]">
-                                                <span className="text-dark text-[9.5px] font-semibold tracking-[0.18em] uppercase block mb-1.5">
+                                                <span className="text-gray-900 text-[9.5px] font-semibold tracking-[0.18em] uppercase block mb-1.5">
                                                     Total Price / Share
                                                 </span>
                                                 <div className="flex items-baseline gap-1">
-                                                    <span className="text-dark text-[12px] font-medium">BDT</span>
+                                                    <span className="text-gray-900 text-[12px] font-medium">BDT</span>
                                                     <span
                                                         className="hs-display font-bold leading-none"
                                                         style={{ fontSize: "1.7rem", color: plan.accent }}
                                                     >
                                                         <CountUp value={plan.totalPrice} inView={inView} />
                                                     </span>
-                                                    <span className="text-dark text-[12px]">/-</span>
+                                                    <span className="text-gray-900 text-[12px]">/-</span>
                                                 </div>
                                             </div>
 
@@ -339,11 +339,11 @@ export default function HotelShares() {
                                                         <span className="text-[#c8bdb4] font-light ml-1">(One Time)</span>
                                                     </span>
                                                     <div className="flex items-baseline gap-1">
-                                                        <span className="text-[#6b6259] text-[10.5px]">BDT</span>
+                                                        <span className="text-gray-900 text-[10.5px]">BDT</span>
                                                         <span className="hs-display text-[#1a1612] font-bold text-[1.2rem] leading-tight">
                                                             <CountUp value={plan.downpayment} inView={inView} />
                                                         </span>
-                                                        <span className="text-dark text-[11px]">/-</span>
+                                                        <span className="text-gray-900 text-[11px]">/-</span>
                                                     </div>
                                                 </div>
 
@@ -354,21 +354,21 @@ export default function HotelShares() {
                                                         <span className="text-[#c8bdb4] font-light ml-1">@ {plan.emiMonths} EMI</span>
                                                     </span>
                                                     <div className="flex items-baseline gap-1">
-                                                        <span className="text-[#6b6259] text-[10.5px]">BDT</span>
+                                                        <span className="text-gray-900 text-[10.5px]">BDT</span>
                                                         <span
                                                             className="hs-display font-bold text-[1.2rem] leading-tight"
                                                             style={{ color: plan.accent }}
                                                         >
                                                             <CountUp value={plan.emi} inView={inView} />
                                                         </span>
-                                                        <span className="text-dark text-[11px]">/-</span>
+                                                        <span className="text-gray-900 text-[11px]">/-</span>
                                                         <span className="text-[#c8bdb4] text-[9.5px] ml-0.5">/ mo</span>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             {/* Description */}
-                                            <p className="text-dark text-[10.5px] font-light leading-relaxed mt-4">
+                                            <p className="text-gray-900 text-[10.5px] font-light leading-relaxed mt-4">
                                                 {plan.description}
                                             </p>
 
@@ -403,7 +403,7 @@ export default function HotelShares() {
                             >
                                 <span
                                     className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                                    style={{ background: "#b89a5e" }}
+                                    style={{ background: "#EEA62A" }}
                                 />
                                 <p className="text-[#a09080] text-[11px] font-light leading-relaxed">
                                     All prices in BDT. EMI plans subject to agreement. Downpayment is one-time and non-refundable.
@@ -436,7 +436,7 @@ export default function HotelShares() {
                                                 5-Star Hotel · Tejgaon
                                             </span>
                                         </div>
-                                        <span className="text-[#b89a5e] text-[11px] font-bold tracking-wide">26–31F</span>
+                                        <span className="text-[#EEA62A] text-[11px] font-bold tracking-wide">26–31F</span>
                                     </div>
                                 </div>
                             </div>
@@ -445,10 +445,10 @@ export default function HotelShares() {
                             <div className="rounded-2xl border border-[#e8e2da] p-5 bg-gradient-to-br from-[#fdf9f3] to-white">
                                 <div className="flex items-center gap-2 mb-4">
                                     <span
-                                        className="block h-px bg-[#b89a5e] origin-left"
+                                        className="block h-px bg-[#EEA62A] origin-left"
                                         style={{ width: 20 }}
                                     />
-                                    <span className="text-[#b89a5e] text-[9.5px] font-semibold tracking-[0.24em] uppercase">
+                                    <span className="text-[#EEA62A] text-[9.5px] font-semibold tracking-[0.24em] uppercase">
                                         Why Invest
                                     </span>
                                 </div>
@@ -466,13 +466,13 @@ export default function HotelShares() {
                                         >
                                             <span
                                                 className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-[9px] font-bold"
-                                                style={{ background: "#b89a5e18", color: "#b89a5e" }}
+                                                style={{ background: "#EEA62A18", color: "#EEA62A" }}
                                             >
                                                 {i + 1}
                                             </span>
                                             <div>
                                                 <p className="text-[#1a1612] text-[11px] font-semibold leading-tight">{item.label}</p>
-                                                <p className="text-dark text-[10px] font-light mt-0.5">{item.note}</p>
+                                                <p className="text-gray-900 text-[10px] font-light mt-0.5">{item.note}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -484,7 +484,7 @@ export default function HotelShares() {
                                 href="#contact"
                                 className="hs-cta-btn w-full flex items-center justify-center gap-2 py-4 rounded-xl text-[11px] font-bold tracking-[0.18em] uppercase"
                                 style={{
-                                    background: "linear-gradient(135deg, #b89a5e, #8a6e3a)",
+                                    background: "linear-gradient(135deg, #EEA62A, #8a6e3a)",
                                     color: "#fff",
                                     boxShadow: "0 6px 28px rgba(184,154,94,0.35)",
                                 }}
@@ -507,7 +507,7 @@ export default function HotelShares() {
                                         className="w-2 h-2 rounded-full flex-shrink-0"
                                         style={{ background: p.accent }}
                                     />
-                                    <span className="text-dark text-[11px] font-medium">{p.label}</span>
+                                    <span className="text-gray-900 text-[11px] font-medium">{p.label}</span>
                                     <span className="text-[#c8bdb4] text-[11px]">·</span>
                                     <span className="text-[#b3a89e] text-[11px] font-light">BDT {p.totalPrice}/-</span>
                                 </div>
@@ -520,7 +520,7 @@ export default function HotelShares() {
 
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b89a5e]/25 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#EEA62A]/25 to-transparent" />
             </section>
         </>
     );

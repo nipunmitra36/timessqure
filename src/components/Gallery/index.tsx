@@ -204,7 +204,7 @@ export default function Gallery() {
         .g-slideUp  { animation: g-slideUp 0.5s ease both; }
 
         .g-gold-text {
-          background: linear-gradient(90deg,#b89a5e 0%,#e8d5a3 45%,#b89a5e 60%,#8a6e3a 100%);
+          background: linear-gradient(90deg,#EEA62A 0%,#e8d5a3 45%,#EEA62A 60%,#8a6e3a 100%);
           background-size:200% auto;
           -webkit-background-clip:text;
           -webkit-text-fill-color:transparent;
@@ -228,13 +228,13 @@ export default function Gallery() {
           transition: all 0.22s ease;
         }
         .g-category-pill.active {
-          background: #b89a5e;
+          background: #EEA62A;
           color: #1a1612;
-          border-color: #b89a5e;
+          border-color: #EEA62A;
         }
         .g-category-pill:not(.active):hover {
           border-color: rgba(184,154,94,0.5);
-          color: #b89a5e;
+          color: #EEA62A;
         }
 
         .g-dot-pattern {
@@ -260,7 +260,7 @@ export default function Gallery() {
                 {/* Dot pattern */}
                 <div className="absolute inset-0 g-dot-pattern opacity-50 pointer-events-none" />
                 {/* Top glow */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[2px] bg-gradient-to-r from-transparent via-[#b89a5e]/50 to-transparent" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[2px] bg-gradient-to-r from-transparent via-[#EEA62A]/50 to-transparent" />
 
                 <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
@@ -272,10 +272,10 @@ export default function Gallery() {
                                 style={{ animationDelay: "0.05s" }}
                             >
                                 <span
-                                    className={`block h-px bg-[#b89a5e] origin-left ${inView ? "g-lineGrow" : "opacity-0"}`}
+                                    className={`block h-px bg-[#EEA62A] origin-left ${inView ? "g-lineGrow" : "opacity-0"}`}
                                     style={{ width: 36, animationDelay: "0.1s" }}
                                 />
-                                <span className="text-[#b89a5e] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                                <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
                                     Visual Tour
                                 </span>
                             </div>
@@ -296,13 +296,13 @@ export default function Gallery() {
                             <span className="text-white/25 text-[11px] tracking-wider uppercase mr-1">View</span>
                             <button
                                 onClick={() => setGridMode("masonry")}
-                                className={`p-2.5 rounded-lg border transition-all duration-200 ${gridMode === "masonry" ? "bg-[#b89a5e]/15 border-[#b89a5e]/50 text-[#b89a5e]" : "border-white/10 text-white/30 hover:text-white/60"}`}
+                                className={`p-2.5 rounded-lg border transition-all duration-200 ${gridMode === "masonry" ? "bg-[#EEA62A]/15 border-[#EEA62A]/50 text-[#EEA62A]" : "border-white/10 text-white/30 hover:text-white/60"}`}
                             >
                                 <TbGridDots size={16} />
                             </button>
                             <button
                                 onClick={() => setGridMode("uniform")}
-                                className={`p-2.5 rounded-lg border transition-all duration-200 ${gridMode === "uniform" ? "bg-[#b89a5e]/15 border-[#b89a5e]/50 text-[#b89a5e]" : "border-white/10 text-white/30 hover:text-white/60"}`}
+                                className={`p-2.5 rounded-lg border transition-all duration-200 ${gridMode === "uniform" ? "bg-[#EEA62A]/15 border-[#EEA62A]/50 text-[#EEA62A]" : "border-white/10 text-white/30 hover:text-white/60"}`}
                             >
                                 <MdOutlineGridView size={16} />
                             </button>
@@ -321,7 +321,7 @@ export default function Gallery() {
                                 className={`g-category-pill px-4 py-1.5 text-[11px] font-semibold tracking-[0.12em] uppercase rounded-full border transition-all duration-200
                   ${activeCategory === cat
                                         ? "active"
-                                        : "border-white/12 text-white/45 bg-transparent"
+                                        : "border-white/12 text-white bg-transparent"
                                     }`}
                             >
                                 {cat}
@@ -360,7 +360,7 @@ export default function Gallery() {
 
                                     {/* Hover content */}
                                     <div className={`absolute inset-0 z-20 flex flex-col justify-end p-4 transition-all duration-350 ${hoveredId === img.id ? "opacity-100" : "opacity-0"}`}>
-                                        <span className="inline-flex self-start items-center px-2 py-0.5 bg-[#b89a5e]/90 text-[#1a1612] text-[9px] font-bold tracking-[0.14em] uppercase rounded-full mb-2">
+                                        <span className="inline-flex self-start items-center px-2 py-0.5 bg-[#EEA62A]/90 text-[#1a1612] text-[9px] font-bold tracking-[0.14em] uppercase rounded-full mb-2">
                                             {img.category}
                                         </span>
                                         <p className="text-white font-semibold text-sm leading-snug">{img.title}</p>
@@ -373,7 +373,7 @@ export default function Gallery() {
                                     </div>
 
                                     {/* Corner accent */}
-                                    <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#b89a5e]/0 group-hover:border-[#b89a5e]/60 transition-all duration-300 rounded-tl-xl z-20" />
+                                    <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#EEA62A]/0 group-hover:border-[#EEA62A]/60 transition-all duration-300 rounded-tl-xl z-20" />
                                 </div>
                             ))}
                         </div>
@@ -398,7 +398,7 @@ export default function Gallery() {
                                     />
                                     <div className="g-overlay absolute inset-0 z-10" />
                                     <div className={`absolute inset-0 z-20 flex flex-col justify-end p-3 transition-all duration-300 ${hoveredId === img.id ? "opacity-100" : "opacity-0"}`}>
-                                        <span className="inline-flex self-start items-center px-2 py-0.5 bg-[#b89a5e]/90 text-[#1a1612] text-[9px] font-bold tracking-[0.12em] uppercase rounded-full mb-1.5">
+                                        <span className="inline-flex self-start items-center px-2 py-0.5 bg-[#EEA62A]/90 text-[#1a1612] text-[9px] font-bold tracking-[0.12em] uppercase rounded-full mb-1.5">
                                             {img.category}
                                         </span>
                                         <p className="text-white font-semibold text-[12px] leading-snug">{img.title}</p>
@@ -417,7 +417,7 @@ export default function Gallery() {
                         style={{ animationDelay: "1s" }}
                     >
                         <div className="flex items-center gap-3">
-                            <HiOutlinePhotograph size={18} className="text-[#b89a5e]/60" />
+                            <HiOutlinePhotograph size={18} className="text-[#EEA62A]" />
                             <span className="text-white/30 text-[12px] font-medium tracking-wide">
                                 {images.length} curated visuals of Times Square, Tejgaon
                             </span>
@@ -426,7 +426,7 @@ export default function Gallery() {
                         {/* FIX: restored proper <a> tag — href was detached from the element */}
                         <a
                             href="/gallery"
-                            className="inline-flex items-center gap-2 border border-[#b89a5e]/35 hover:border-[#b89a5e] text-[#b89a5e] text-[11px] font-semibold tracking-[0.16em] uppercase px-6 py-3 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#b89a5e]/8"
+                            className="inline-flex items-center gap-2 border border-[#EEA62A]/35 hover:border-[#EEA62A] text-[#EEA62A] text-[11px] font-semibold tracking-[0.16em] uppercase px-6 py-3 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EEA62A]/8"
                         >
                             View Full Gallery →
                         </a>
@@ -435,7 +435,7 @@ export default function Gallery() {
                 </div>
 
                 {/* Bottom glow */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[1px] bg-gradient-to-r from-transparent via-[#b89a5e]/40 to-transparent" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[1px] bg-gradient-to-r from-transparent via-[#EEA62A]/40 to-transparent" />
             </section>
 
             {/* ── Lightbox ── */}
@@ -447,14 +447,14 @@ export default function Gallery() {
                     {/* Close */}
                     <button
                         onClick={closeLightbox}
-                        className="absolute top-5 right-5 z-10 w-10 h-10 rounded-xl border border-white/15 bg-white/5 hover:bg-white/12 hover:border-[#b89a5e]/50 flex items-center justify-center text-white/60 hover:text-white transition-all duration-200"
+                        className="absolute top-5 right-5 z-10 w-10 h-10 rounded-xl border border-white/15 bg-white/5 hover:bg-white/12 hover:border-[#EEA62A]/50 flex items-center justify-center text-white/60 hover:text-white transition-all duration-200"
                     >
                         <BsXLg size={14} />
                     </button>
 
                     {/* Counter */}
                     <div className="absolute top-5 left-5 z-10 flex items-center gap-3">
-                        <span className="g-display text-[#b89a5e] font-bold text-xl leading-none">
+                        <span className="g-display text-[#EEA62A] font-bold text-xl leading-none">
                             0{lightboxIndex + 1}
                         </span>
                         <span className="text-white/20 text-sm">/</span>
@@ -476,7 +476,7 @@ export default function Gallery() {
                                 style={{ maxHeight: "72vh" }}
                             />
                             {/* Category badge */}
-                            <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1 bg-[#b89a5e] text-[#1a1612] text-[10px] font-bold tracking-[0.16em] uppercase rounded-full">
+                            <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1 bg-[#EEA62A] text-[#1a1612] text-[10px] font-bold tracking-[0.16em] uppercase rounded-full">
                                 {currentImage.category}
                             </span>
                         </div>
@@ -496,7 +496,7 @@ export default function Gallery() {
                                     <button
                                         key={i}
                                         onClick={() => setLightboxIndex(i)}
-                                        className={`rounded-full transition-all duration-200 ${i === lightboxIndex ? "w-4 h-1.5 bg-[#b89a5e]" : "w-1.5 h-1.5 bg-white/20 hover:bg-white/45"}`}
+                                        className={`rounded-full transition-all duration-200 ${i === lightboxIndex ? "w-4 h-1.5 bg-[#EEA62A]" : "w-1.5 h-1.5 bg-white/20 hover:bg-white/45"}`}
                                     />
                                 ))}
                             </div>
@@ -506,13 +506,13 @@ export default function Gallery() {
                     {/* Prev / Next */}
                     <button
                         onClick={prevImage}
-                        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-xl border border-white/12 bg-white/5 hover:bg-[#b89a5e]/15 hover:border-[#b89a5e]/50 flex items-center justify-center text-white/50 hover:text-[#b89a5e] transition-all duration-200"
+                        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-xl border border-white/12 bg-white/5 hover:bg-[#EEA62A]/15 hover:border-[#EEA62A]/50 flex items-center justify-center text-white/50 hover:text-[#EEA62A] transition-all duration-200"
                     >
                         <BsArrowLeft size={16} />
                     </button>
                     <button
                         onClick={nextImage}
-                        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-xl border border-white/12 bg-white/5 hover:bg-[#b89a5e]/15 hover:border-[#b89a5e]/50 flex items-center justify-center text-white/50 hover:text-[#b89a5e] transition-all duration-200"
+                        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-xl border border-white/12 bg-white/5 hover:bg-[#EEA62A]/15 hover:border-[#EEA62A]/50 flex items-center justify-center text-white/50 hover:text-[#EEA62A] transition-all duration-200"
                     >
                         <BsArrowRight size={16} />
                     </button>
@@ -523,7 +523,7 @@ export default function Gallery() {
                             <button
                                 key={img.id}
                                 onClick={() => setLightboxIndex(i)}
-                                className={`flex-shrink-0 w-12 h-9 rounded-lg overflow-hidden border-2 transition-all duration-200 ${i === lightboxIndex ? "border-[#b89a5e] opacity-100 scale-110" : "border-transparent opacity-40 hover:opacity-70"}`}
+                                className={`flex-shrink-0 w-12 h-9 rounded-lg overflow-hidden border-2 transition-all duration-200 ${i === lightboxIndex ? "border-[#EEA62A] opacity-100 scale-110" : "border-transparent opacity-40 hover:opacity-70"}`}
                             >
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img src={img.thumb} alt={img.title} className="w-full h-full object-cover" />

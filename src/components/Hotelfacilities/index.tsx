@@ -192,7 +192,7 @@ export default function HotelFacilities() {
         .hf-tagIn     { animation: hf-tagIn     0.35s cubic-bezier(0.34,1.2,0.64,1) both; }
 
         .hf-gold-text {
-          background: linear-gradient(90deg, #b89a5e 0%, #e8d5a3 45%, #b89a5e 60%, #8a6e3a 100%);
+          background: linear-gradient(90deg, #EEA62A 0%, #e8d5a3 45%, #EEA62A 60%, #8a6e3a 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -287,13 +287,13 @@ export default function HotelFacilities() {
                 <div
                     className="absolute inset-0 z-[1] pointer-events-none opacity-[0.04]"
                     style={{
-                        backgroundImage: "radial-gradient(circle, #b89a5e 1px, transparent 1px)",
+                        backgroundImage: "radial-gradient(circle, #EEA62A 1px, transparent 1px)",
                         backgroundSize: "28px 28px",
                     }}
                 />
 
                 {/* Top rule */}
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b89a5e]/40 to-transparent z-10" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#EEA62A]/40 to-transparent z-10" />
 
                 {/* ── Content ── */}
                 <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-24 lg:py-36">
@@ -305,10 +305,10 @@ export default function HotelFacilities() {
                             style={{ animationDelay: "0.05s" }}
                         >
                             <span
-                                className={`block h-px bg-[#b89a5e] origin-left ${inView ? "hf-lineGrow" : "opacity-0"}`}
+                                className={`block h-px bg-[#EEA62A] origin-left ${inView ? "hf-lineGrow" : "opacity-0"}`}
                                 style={{ width: 36, animationDelay: "0.1s" }}
                             />
-                            <span className="text-[#b89a5e] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                            <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
                                 World-Class Amenities
                             </span>
                         </div>
@@ -352,7 +352,7 @@ export default function HotelFacilities() {
                                             <div>
                                                 <span
                                                     className={`block text-[11px] font-semibold tracking-wide transition-colors duration-300 whitespace-nowrap
-                            ${isActive ? "text-white" : "text-white/45"}`}
+                            ${isActive ? "text-white" : "text-white"}`}
                                                 >
                                                     {f.shortName}
                                                 </span>
@@ -375,7 +375,7 @@ export default function HotelFacilities() {
                                 className="hidden lg:flex items-center gap-2 mt-6 pl-4"
                             >
                                 <span
-                                    className="hf-counter-glow w-8 h-8 rounded-full border border-[#b89a5e]/40 flex items-center justify-center text-[#b89a5e] text-[11px] font-bold"
+                                    className="hf-counter-glow w-8 h-8 rounded-full border border-[#EEA62A]/40 flex items-center justify-center text-[#EEA62A] text-[11px] font-bold"
                                 >
                                     {facilities.length}
                                 </span>
@@ -534,7 +534,7 @@ export default function HotelFacilities() {
                 </div>
 
                 {/* Bottom rule */}
-                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b89a5e]/30 to-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#EEA62A]/30 to-transparent z-10" />
             </section>
         </>
     );

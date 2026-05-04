@@ -42,7 +42,7 @@ const INFO_ITEMS = [
                 height="15"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#b89a5e"
+                stroke="#EEA62A"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -62,7 +62,7 @@ const INFO_ITEMS = [
                 height="15"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#b89a5e"
+                stroke="#EEA62A"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -81,7 +81,7 @@ const INFO_ITEMS = [
                 height="15"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#b89a5e"
+                stroke="#EEA62A"
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -139,9 +139,9 @@ function TextareaIcon({ children }: { children: React.ReactNode }) {
 function getSubmitButtonClass(state: SubmitState): string {
     const base =
         "relative mt-6 flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-xl px-6 py-[15px] font-[Montserrat] text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition-all duration-300";
-    if (state === "loading") return `${base} bg-[#b89a5e] pointer-events-none`;
+    if (state === "loading") return `${base} bg-[#EEA62A] pointer-events-none`;
     if (state === "success") return `${base} bg-green-800 pointer-events-none`;
-    return `${base} bg-[#1a1612] hover:bg-[#b89a5e] hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(184,154,94,0.3)] active:scale-[0.98]`;
+    return `${base} bg-[#1a1612] hover:bg-[#EEA62A] hover:-translate-y-[2px] hover:shadow-[0_8px_30px_rgba(184,154,94,0.3)] active:scale-[0.98]`;
 }
 
 // ── Main component ───────────────────────────────────────────────────────────
@@ -277,7 +277,7 @@ export default function ContactForm() {
         .cf-animate-cardIn  { animation: cf-cardIn  0.7s cubic-bezier(0.25,0.46,0.45,0.94) both; }
 
         .cf-gold-text {
-          background: linear-gradient(90deg,#b89a5e 0%,#e8d5a3 45%,#b89a5e 60%,#8a6e3a 100%);
+          background: linear-gradient(90deg,#EEA62A 0%,#e8d5a3 45%,#EEA62A 60%,#8a6e3a 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -305,14 +305,14 @@ export default function ContactForm() {
         .cf-live-dot { animation: cf-pulse 2s ease infinite; }
 
         .cf-input-icon { color: #c5bdb7; }
-        .focused .cf-input-icon { color: #b89a5e; }
+        .focused .cf-input-icon { color: #EEA62A; }
         .has-error .cf-input-icon { color: #c0392b; }
 
         .cf-textarea-icon { color: #c5bdb7; }
-        .focused .cf-textarea-icon { color: #b89a5e; }
+        .focused .cf-textarea-icon { color: #EEA62A; }
 
         .cf-label { color: #9c8f84; transition: color 0.2s ease; }
-        .focused .cf-label { color: #b89a5e; }
+        .focused .cf-label { color: #EEA62A; }
         .has-error .cf-label { color: #c0392b; }
 
         .has-error input,
@@ -330,12 +330,12 @@ export default function ContactForm() {
                 <div
                     className="pointer-events-none absolute inset-0 opacity-[0.025]"
                     style={{
-                        backgroundImage: "radial-gradient(circle, #b89a5e 1px, transparent 1px)",
+                        backgroundImage: "radial-gradient(circle, #EEA62A 1px, transparent 1px)",
                         backgroundSize: "28px 28px",
                     }}
                 />
-                <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-[#b89a5e]/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b89a5e]/25 to-transparent" />
+                <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-[#EEA62A]/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#EEA62A]/25 to-transparent" />
 
                 <div className="relative mx-auto grid max-w-6xl grid-cols-1 gap-10 px-5 sm:px-8 lg:grid-cols-[1fr_1.45fr] lg:gap-14 lg:px-12">
 
@@ -347,10 +347,10 @@ export default function ContactForm() {
                             style={{ animationDelay: "0.05s" }}
                         >
                             <span
-                                className={`block h-px w-9 bg-[#b89a5e] origin-left ${inView ? "cf-animate-lineGrow" : "opacity-0"}`}
+                                className={`block h-px w-9 bg-[#EEA62A] origin-left ${inView ? "cf-animate-lineGrow" : "opacity-0"}`}
                                 style={{ animationDelay: "0.08s" }}
                             />
-                            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#b89a5e]">
+                            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#EEA62A]">
                                 Send an Enquiry
                             </span>
                         </div>
@@ -368,7 +368,7 @@ export default function ContactForm() {
 
                         {/* Description */}
                         <p
-                            className={`mt-4 max-w-[300px] text-[12px] font-light leading-relaxed tracking-wide text-[#6b6259] ${inView ? "cf-animate-fadeUp" : "opacity-0"}`}
+                            className={`mt-4 max-w-[300px] text-[12px] font-light leading-relaxed tracking-wide text-gray-900 ${inView ? "cf-animate-fadeUp" : "opacity-0"}`}
                             style={{ animationDelay: "0.25s" }}
                         >
                             Whether you&apos;re exploring a commercial space, a hospitality partnership,
@@ -377,7 +377,7 @@ export default function ContactForm() {
 
                         {/* Divider */}
                         <div
-                            className={`my-6 h-px w-12 bg-[#b89a5e]/40 ${inView ? "cf-animate-fadeIn" : "opacity-0"}`}
+                            className={`my-6 h-px w-12 bg-[#EEA62A]/40 ${inView ? "cf-animate-fadeIn" : "opacity-0"}`}
                             style={{ animationDelay: "0.35s" }}
                         />
 
@@ -393,14 +393,14 @@ export default function ContactForm() {
                                         {item.icon}
                                     </div>
                                     <div>
-                                        <p className="mb-[3px] text-[9px] font-semibold uppercase tracking-[0.18em] text-[#b89a5e]">
+                                        <p className="mb-[3px] text-[9px] font-semibold uppercase tracking-[0.18em] text-[#EEA62A]">
                                             {item.label}
                                         </p>
                                         <a
                                             href={item.href}
                                             target={item.href.startsWith("http") ? "_blank" : undefined}
                                             rel="noreferrer"
-                                            className="whitespace-pre-line text-[12px] text-[#1a1612] transition-colors duration-200 hover:text-[#b89a5e]"
+                                            className="whitespace-pre-line text-[12px] text-[#1a1612] transition-colors duration-200 hover:text-[#EEA62A]"
                                             style={{ textDecoration: "none" }}
                                         >
                                             {item.value}
@@ -412,7 +412,7 @@ export default function ContactForm() {
 
                         {/* Hours badge */}
                         <div
-                            className={`mt-8 inline-flex flex-col items-start gap-1 rounded-2xl border border-[#b89a5e]/25 bg-gradient-to-br from-[#fdf9f3] to-white px-5 py-4 ${inView ? "cf-animate-fadeIn" : "opacity-0"}`}
+                            className={`mt-8 inline-flex flex-col items-start gap-1 rounded-2xl border border-[#EEA62A]/25 bg-gradient-to-br from-[#fdf9f3] to-white px-5 py-4 ${inView ? "cf-animate-fadeIn" : "opacity-0"}`}
                             style={{ animationDelay: "0.75s" }}
                         >
                             <div className="flex items-center gap-2">
@@ -420,12 +420,12 @@ export default function ContactForm() {
                                     className="cf-live-dot h-2 w-2 rounded-full bg-green-500"
                                     style={{ boxShadow: "0 0 0 3px rgba(34,197,94,0.2)" }}
                                 />
-                                <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-dark">
+                                <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-gray-900">
                                     Office Hours
                                 </span>
                             </div>
                             <p className="text-[12px] font-medium text-[#1a1612]">9:00 AM – 6:00 PM</p>
-                            <p className="text-[10px] text-dark">Sunday – Thursday</p>
+                            <p className="text-[10px] text-gray-900">Sunday – Thursday</p>
                         </div>
                     </div>
 
@@ -435,7 +435,7 @@ export default function ContactForm() {
                         style={{ animationDelay: "0.35s" }}
                     >
                         {/* Accent stripe */}
-                        <div className="h-[3px] w-full bg-gradient-to-r from-[#b89a5e55] via-[#b89a5e] to-[#b89a5e55]" />
+                        <div className="h-[3px] w-full bg-gradient-to-r from-[#EEA62A55] via-[#EEA62A] to-[#EEA62A55]" />
 
                         {/* ── Success pane ── */}
                         {submitState === "success" ? (
@@ -457,13 +457,13 @@ export default function ContactForm() {
                                 <h3 className="cf-display text-[1.8rem] font-bold text-[#1a1612]">
                                     Message Sent
                                 </h3>
-                                <p className="max-w-[260px] text-[12px] leading-relaxed text-[#6b6259]">
+                                <p className="max-w-[260px] text-[12px] leading-relaxed text-gray-900">
                                     Thank you for reaching out. Our team will be in touch within 1–2
                                     business days.
                                 </p>
                                 <button
                                     onClick={resetForm}
-                                    className="mt-2 rounded-[10px] border border-[#b89a5e]/40 px-6 py-[9px] text-[10.5px] font-semibold uppercase tracking-[0.15em] text-[#b89a5e] transition-all duration-200 hover:bg-[rgba(184,154,94,0.08)] cursor-pointer bg-transparent"
+                                    className="mt-2 rounded-[10px] border border-[#EEA62A]/40 px-6 py-[9px] text-[10.5px] font-semibold uppercase tracking-[0.15em] text-[#EEA62A] transition-all duration-200 hover:bg-[rgba(184,154,94,0.08)] cursor-pointer bg-transparent"
                                 >
                                     Send Another Message
                                 </button>
@@ -475,7 +475,7 @@ export default function ContactForm() {
                                 <h3 className="cf-display mb-1 text-[1.4rem] font-semibold text-[#1a1612]">
                                     Send a Message
                                 </h3>
-                                <p className="mb-7 text-[10.5px] tracking-wide text-dark">
+                                <p className="mb-7 text-[10.5px] tracking-wide text-gray-900">
                                     We typically respond within 1–2 business days.
                                 </p>
 
@@ -590,7 +590,7 @@ export default function ContactForm() {
 
                                 {/* Interest chips */}
                                 <div className="mb-5">
-                                    <p className="mb-[10px] text-[9.5px] font-semibold uppercase tracking-[0.15em] text-dark">
+                                    <p className="mb-[10px] text-[9.5px] font-semibold uppercase tracking-[0.15em] text-gray-900">
                                         Area of Interest
                                     </p>
                                     <div className="flex flex-wrap gap-2">
@@ -604,8 +604,8 @@ export default function ContactForm() {
                                                     className={[
                                                         "rounded-full border px-[14px] py-[7px] text-[10.5px] font-medium transition-all duration-200 cursor-pointer",
                                                         active
-                                                            ? "border-[#b89a5e] bg-[rgba(184,154,94,0.1)] text-[#b89a5e] font-semibold"
-                                                            : "border-[#e8e2da] bg-[#faf8f5] text-dark hover:border-[rgba(184,154,94,0.4)] hover:text-[#b89a5e] hover:bg-[rgba(184,154,94,0.06)]",
+                                                            ? "border-[#EEA62A] bg-[rgba(184,154,94,0.1)] text-[#EEA62A] font-semibold"
+                                                            : "border-[#e8e2da] bg-[#faf8f5] text-gray-900 hover:border-[rgba(184,154,94,0.4)] hover:text-[#EEA62A] hover:bg-[rgba(184,154,94,0.06)]",
                                                     ].join(" ")}
                                                 >
                                                     {chip}
@@ -703,12 +703,12 @@ export default function ContactForm() {
                         <div className="flex flex-wrap items-center gap-5 border-t border-[#f5f0eb] bg-[#fdf9f3] px-7 py-5">
                             <div className="flex items-center gap-2">
                                 <span className="h-[6px] w-[6px] rounded-full bg-green-500" />
-                                <span className="text-[10px] text-dark">Response time:</span>
+                                <span className="text-[10px] text-gray-900">Response time:</span>
                                 <span className="text-[10px] font-medium text-[#1a1612]">1–2 Business Days</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="h-[6px] w-[6px] rounded-full bg-[#b89a5e]" />
-                                <span className="text-[10px] text-dark">Hours:</span>
+                                <span className="h-[6px] w-[6px] rounded-full bg-[#EEA62A]" />
+                                <span className="text-[10px] text-gray-900">Hours:</span>
                                 <span className="text-[10px] font-medium text-[#1a1612]">Sun–Thu, 9 AM–6 PM</span>
                             </div>
                         </div>
