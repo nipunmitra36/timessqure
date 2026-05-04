@@ -166,8 +166,8 @@ export default function HeroSlider() {
                     className="absolute inset-0 z-[5] flex flex-col justify-center px-8 sm:px-16 lg:px-28 max-w-4xl"
                 >
                     {/* Tag */}
-                    <p className="anim-tag flex items-center gap-3 text-[#b89a5e] text-[10px] font-semibold tracking-[0.22em] uppercase mb-5">
-                        <span className="block w-8 h-px bg-[#b89a5e]" />
+                    <p className="anim-tag flex items-center gap-3 text-[#EEA62A] text-[10px] font-semibold tracking-[0.22em] uppercase mb-5">
+                        <span className="block w-8 h-px bg-[#EEA62A]" />
                         {slides[current].tag}
                     </p>
 
@@ -190,13 +190,13 @@ export default function HeroSlider() {
                     <div className="anim-btns flex flex-wrap items-center gap-4">
                         <Link
                             href="/book"
-                            className="inline-flex items-center gap-2 bg-[#b89a5e] hover:bg-[#d4b87a] text-[#1a1612] px-8 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm transition-all duration-200 hover:-translate-y-0.5"
+                            className="inline-flex items-center gap-2 bg-[#EEA62A] hover:bg-[#d4b87a] text-[#1a1612] px-8 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm transition-all duration-200 hover:-translate-y-0.5"
                         >
                             Book Now <span>→</span>
                         </Link>
                         <Link
                             href="/about"
-                            className="inline-flex items-center gap-2 text-white hover:text-[#b89a5e] border border-white/30 hover:border-[#b89a5e] px-7 py-3.5 text-[11px] font-medium tracking-[0.14em] uppercase rounded-sm transition-all duration-200 hover:-translate-y-0.5"
+                            className="inline-flex items-center gap-2 text-white hover:text-[#EEA62A] border border-white/30 hover:border-[#EEA62A] px-7 py-3.5 text-[11px] font-medium tracking-[0.14em] uppercase rounded-sm transition-all duration-200 hover:-translate-y-0.5"
                         >
                             See Details <span>↗</span>
                         </Link>
@@ -207,14 +207,14 @@ export default function HeroSlider() {
                 <button
                     onClick={() => goTo((current - 1 + slides.length) % slides.length)}
                     aria-label="Previous slide"
-                    className="hidden md:flex absolute right-20 top-1/2 -translate-y-1/2 z-[6] w-12 h-12 items-center justify-center border border-white/20 hover:border-[#b89a5e] bg-white/5 hover:bg-[#b89a5e]/15 text-white backdrop-blur-sm rounded-sm transition-all duration-200"
+                    className="hidden md:flex absolute right-20 top-1/2 -translate-y-1/2 z-[6] w-12 h-12 items-center justify-center border border-white/20 hover:border-[#EEA62A] bg-white/5 hover:bg-[#EEA62A]/15 text-white backdrop-blur-sm rounded-sm transition-all duration-200"
                 >
                     ←
                 </button>
                 <button
                     onClick={() => goTo((current + 1) % slides.length)}
                     aria-label="Next slide"
-                    className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-[6] w-12 h-12 items-center justify-center border border-white/20 hover:border-[#b89a5e] bg-white/5 hover:bg-[#b89a5e]/15 text-white backdrop-blur-sm rounded-sm transition-all duration-200"
+                    className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-[6] w-12 h-12 items-center justify-center border border-white/20 hover:border-[#EEA62A] bg-white/5 hover:bg-[#EEA62A]/15 text-white backdrop-blur-sm rounded-sm transition-all duration-200"
                 >
                     →
                 </button>
@@ -233,7 +233,7 @@ export default function HeroSlider() {
                                 className="relative w-9 h-0.5 bg-white/20 hover:bg-white/35 rounded-sm overflow-hidden transition-colors duration-200"
                             >
                                 <span
-                                    className="absolute inset-0 bg-[#b89a5e] rounded-sm origin-left"
+                                    className="absolute inset-0 bg-[#EEA62A] rounded-sm origin-left"
                                     style={{
                                         transform: `scaleX(${i === current ? progress / 100 : i < current ? 1 : 0})`,
                                         transition: i === current ? "none" : "transform 0.3s ease",

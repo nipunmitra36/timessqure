@@ -140,7 +140,7 @@ export default function CommercialFloor() {
         .cf-imgReveal { animation: cf-imgReveal 1.1s cubic-bezier(0.77,0,0.18,1) both; }
 
         .cf-gold-text {
-          background: linear-gradient(90deg,#b89a5e 0%,#e8d5a3 45%,#b89a5e 60%,#8a6e3a 100%);
+          background: linear-gradient(90deg,#EEA62A 0%,#e8d5a3 45%,#EEA62A 60%,#8a6e3a 100%);
           background-size:200% auto;
           -webkit-background-clip:text;
           -webkit-text-fill-color:transparent;
@@ -169,7 +169,7 @@ export default function CommercialFloor() {
                 <div className="absolute inset-0 cf-dot-pattern pointer-events-none opacity-60" />
 
                 {/* Top decorative border */}
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#b89a5e]/40 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#EEA62A]/40 to-transparent" />
 
                 <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
@@ -180,10 +180,10 @@ export default function CommercialFloor() {
                             style={{ animationDelay: "0.05s" }}
                         >
                             <span
-                                className={`block h-px bg-[#b89a5e] origin-left ${inView ? "cf-lineGrow" : "opacity-0"}`}
+                                className={`block h-px bg-[#EEA62A] origin-left ${inView ? "cf-lineGrow" : "opacity-0"}`}
                                 style={{ width: 36, animationDelay: "0.1s" }}
                             />
-                            <span className="text-[#b89a5e] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                            <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
                                 Floor Plans
                             </span>
                         </div>
@@ -207,7 +207,7 @@ export default function CommercialFloor() {
 
                         {/* Divider */}
                         <div
-                            className={`mt-8 h-px bg-gradient-to-r from-[#b89a5e]/40 via-[#b89a5e]/10 to-transparent ${inView ? "cf-lineGrow" : "opacity-0"}`}
+                            className={`mt-8 h-px bg-gradient-to-r from-[#EEA62A]/40 via-[#EEA62A]/10 to-transparent ${inView ? "cf-lineGrow" : "opacity-0"}`}
                             style={{ animationDelay: "0.3s" }}
                         />
                     </div>
@@ -223,7 +223,7 @@ export default function CommercialFloor() {
                                 className={`flex items-center gap-2 mb-6 ${inView ? "cf-fadeLeft" : "opacity-0"}`}
                                 style={{ animationDelay: "0.35s" }}
                             >
-                                <HiOutlineOfficeBuilding size={14} className="text-[#b89a5e]" />
+                                <HiOutlineOfficeBuilding size={14} className="text-[#EEA62A]" />
                                 <span className="text-[10px] font-semibold tracking-[0.2em] text-[#1a1612] uppercase">
                                     Available Units
                                 </span>
@@ -236,7 +236,7 @@ export default function CommercialFloor() {
                                         key={f.id}
                                         className={`cf-card-hover group relative bg-white border rounded-2xl p-6 flex flex-col gap-4 cursor-default transition-all duration-300
                       ${f.accent
-                                                ? "border-[#b89a5e]/30 bg-gradient-to-br from-white to-[#faf8f4]"
+                                                ? "border-[#EEA62A]/30 bg-gradient-to-br from-white to-[#faf8f4]"
                                                 : "border-[#1a1612]/8"
                                             }
                       ${inView ? "cf-cardIn" : "opacity-0"}`}
@@ -247,8 +247,8 @@ export default function CommercialFloor() {
                                             <span
                                                 className={`p-2 rounded-lg transition-colors duration-300
                           ${f.accent
-                                                        ? "bg-[#b89a5e]/12 text-[#b89a5e] group-hover:bg-[#b89a5e]/20"
-                                                        : "bg-[#1a1612]/5 text-[#1a1612]/40 group-hover:bg-[#b89a5e]/10 group-hover:text-[#b89a5e]"
+                                                        ? "bg-[#EEA62A]/12 text-[#EEA62A] group-hover:bg-[#EEA62A]/20"
+                                                        : "bg-[#1a1612]/5 text-[#1a1612]/40 group-hover:bg-[#EEA62A]/10 group-hover:text-[#EEA62A]"
                                                     }`}
                                             >
                                                 {f.icon}
@@ -256,7 +256,7 @@ export default function CommercialFloor() {
                                             <span
                                                 className={`text-[10px] font-semibold tracking-[0.14em] uppercase px-2.5 py-1 rounded-full
                           ${f.accent
-                                                        ? "bg-[#b89a5e]/12 text-[#b89a5e]"
+                                                        ? "bg-[#EEA62A]/12 text-[#EEA62A]"
                                                         : "bg-[#1a1612]/6 text-[#1a1612]/40"
                                                     }`}
                                             >
@@ -271,7 +271,7 @@ export default function CommercialFloor() {
                                             </p>
                                             <div className="flex items-baseline gap-1.5">
                                                 <span
-                                                    className={`cf-display font-bold leading-none ${f.accent ? "text-[#b89a5e]" : "text-[#1a1612]"}`}
+                                                    className={`cf-display font-bold leading-none ${f.accent ? "text-[#EEA62A]" : "text-[#1a1612]"}`}
                                                     style={{ fontSize: "clamp(1.6rem,2.5vw,2.2rem)" }}
                                                 >
                                                     {f.area}
@@ -283,7 +283,7 @@ export default function CommercialFloor() {
                                         {/* Level info */}
                                         {f.levels && (
                                             <div className="flex items-center gap-2">
-                                                <HiOutlineOfficeBuilding size={12} className="text-[#b89a5e]/60 flex-shrink-0" />
+                                                <HiOutlineOfficeBuilding size={12} className="text-[#EEA62A] flex-shrink-0" />
                                                 <span className="text-[11px] text-[#1a1612] font-medium">{f.levels}</span>
                                             </div>
                                         )}
@@ -301,7 +301,7 @@ export default function CommercialFloor() {
                                         )}
 
                                         {/* Bottom hover accent */}
-                                        <span className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-[#b89a5e]/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
+                                        <span className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-[#EEA62A]/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
                                     </div>
                                 ))}
                             </div>
@@ -320,7 +320,7 @@ export default function CommercialFloor() {
 
                                 <a
                                     href="/contact"
-                                    className="flex-1 inline-flex items-center justify-center gap-2 border border-[#b89a5e]/50 hover:border-[#b89a5e] text-[#b89a5e] text-[11px] font-semibold tracking-[0.16em] uppercase px-6 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#b89a5e]/5"
+                                    className="flex-1 inline-flex items-center justify-center gap-2 border border-[#EEA62A]/50 hover:border-[#EEA62A] text-[#EEA62A] text-[11px] font-semibold tracking-[0.16em] uppercase px-6 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EEA62A]/5"
                                 >
                                     Book a Unit
                                 </a>
@@ -345,7 +345,7 @@ export default function CommercialFloor() {
                                 {/* Label overlay */}
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1a1612]/70 to-transparent px-5 py-4">
                                     <p className="text-white text-[11px] font-semibold tracking-[0.16em] uppercase flex items-center gap-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[#b89a5e]" />
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#EEA62A]" />
                                         Typical Floor Plan
                                     </p>
                                 </div>
@@ -367,7 +367,7 @@ export default function CommercialFloor() {
                                 {/* Times Square badge */}
                                 <div className="absolute top-4 left-4">
                                     <span className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-sm text-[#1a1612] text-[10px] font-bold tracking-[0.18em] uppercase px-3 py-1.5 rounded-full shadow-sm">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[#b89a5e]" />
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#EEA62A]" />
                                         Times Square Lobby
                                     </span>
                                 </div>
@@ -390,7 +390,7 @@ export default function CommercialFloor() {
                                     { label: "Max Unit", value: "8,864 sft" },
                                 ].map((s) => (
                                     <div key={s.label} className="bg-[#faf9f7] px-4 py-4 text-center">
-                                        <p className="cf-display text-[#b89a5e] font-bold text-xl leading-none mb-1">{s.value}</p>
+                                        <p className="cf-display text-[#EEA62A] font-bold text-xl leading-none mb-1">{s.value}</p>
                                         <p className="text-[10px] text-[#1a1612] font-medium tracking-[0.1em] uppercase">{s.label}</p>
                                     </div>
                                 ))}
@@ -401,7 +401,7 @@ export default function CommercialFloor() {
                 </div >
 
                 {/* Bottom border */}
-                < div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#b89a5e]/30 to-transparent" />
+                < div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#EEA62A]/30 to-transparent" />
             </section >
         </>
     );

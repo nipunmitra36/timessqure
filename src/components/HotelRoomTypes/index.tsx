@@ -11,7 +11,7 @@ const roomTypes = [
         floors: "26th – 31st Floor",
         tagline: "Unrivalled space, unrivalled presence",
         features: ["King Bed", "Living Area", "Panoramic View", "Walk-in Closet", "Luxury Bath"],
-        accent: "#b89a5e",
+        accent: "#EEA62A",
         badge: "Signature",
         description:
             "Our crown jewel. Expansive living quarters with floor-to-ceiling glass, handcrafted furnishings, and a private dining alcove — curated for the most discerning guests.",
@@ -153,7 +153,7 @@ export default function HotelRoomTypes() {
         .rt-number    { animation: rt-numberCount 0.4s cubic-bezier(0.34,1.2,0.64,1) both; }
 
         .rt-gold-text {
-          background: linear-gradient(90deg, #b89a5e 0%, #e8d5a3 45%, #b89a5e 60%, #8a6e3a 100%);
+          background: linear-gradient(90deg, #EEA62A 0%, #e8d5a3 45%, #EEA62A 60%, #8a6e3a 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -224,13 +224,13 @@ export default function HotelRoomTypes() {
                 className="rt-ui relative w-full bg-white overflow-hidden py-24 lg:py-36"
             >
                 {/* Subtle top rule */}
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b89a5e]/30 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#EEA62A]/30 to-transparent" />
 
                 {/* Background texture — very subtle dot grid */}
                 <div
                     className="absolute inset-0 pointer-events-none opacity-[0.035]"
                     style={{
-                        backgroundImage: "radial-gradient(circle, #b89a5e 1px, transparent 1px)",
+                        backgroundImage: "radial-gradient(circle, #EEA62A 1px, transparent 1px)",
                         backgroundSize: "28px 28px",
                     }}
                 />
@@ -245,10 +245,10 @@ export default function HotelRoomTypes() {
                                 style={{ animationDelay: "0.05s" }}
                             >
                                 <span
-                                    className={`block h-px bg-[#b89a5e] origin-left ${inView ? "rt-lineGrow" : "opacity-0"}`}
+                                    className={`block h-px bg-[#EEA62A] origin-left ${inView ? "rt-lineGrow" : "opacity-0"}`}
                                     style={{ width: 36, animationDelay: "0.1s" }}
                                 />
-                                <span className="text-[#b89a5e] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                                <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
                                     Accommodation
                                 </span>
                             </div>
@@ -260,7 +260,7 @@ export default function HotelRoomTypes() {
                                 <span className="rt-gold-text">Room Types</span>
                             </h2>
                             <p
-                                className={`text-[#6b6259] text-[13px] font-light tracking-wide mt-3 max-w-sm ${inView ? "rt-fadeUp" : "opacity-0"}`}
+                                className={`text-gray-900 text-[13px] font-light tracking-wide mt-3 max-w-sm ${inView ? "rt-fadeUp" : "opacity-0"}`}
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 26th – 31st Floor · 4 curated room categories
@@ -269,13 +269,13 @@ export default function HotelRoomTypes() {
 
                         {/* Floor badge */}
                         <div
-                            className={`rt-floor-badge inline-flex flex-col items-center justify-center border border-[#b89a5e]/30 rounded-2xl px-8 py-5 ${inView ? "rt-fadeIn" : "opacity-0"}`}
+                            className={`rt-floor-badge inline-flex flex-col items-center justify-center border border-[#EEA62A]/30 rounded-2xl px-8 py-5 ${inView ? "rt-fadeIn" : "opacity-0"}`}
                             style={{ animationDelay: "0.35s" }}
                         >
-                            <span className="rt-display text-[#b89a5e] font-bold text-4xl leading-none">6</span>
-                            <span className="text-dark text-[10px] font-semibold tracking-[0.2em] uppercase mt-1">Floors</span>
-                            <div className="w-8 h-px bg-[#b89a5e]/30 my-2" />
-                            <span className="text-dark text-[10px] font-medium tracking-wide">26 – 31</span>
+                            <span className="rt-display text-[#EEA62A] font-bold text-4xl leading-none">6</span>
+                            <span className="text-gray-900 text-[10px] font-semibold tracking-[0.2em] uppercase mt-1">Floors</span>
+                            <div className="w-8 h-px bg-[#EEA62A]/30 my-2" />
+                            <span className="text-gray-900 text-[10px] font-medium tracking-wide">26 – 31</span>
                         </div>
                     </div>
 
@@ -307,8 +307,8 @@ export default function HotelRoomTypes() {
                                             onMouseLeave={() => setHoveredRoom(null)}
                                             className={`rt-card relative rounded-2xl border p-5 sm:p-6 bg-white
                         ${isActive
-                                                    ? "border-[#b89a5e]/60 shadow-[0_8px_40px_rgba(184,154,94,0.15)]"
-                                                    : "border-[#e8e2da] hover:border-[#b89a5e]/30 hover:shadow-[0_4px_20px_rgba(184,154,94,0.08)]"
+                                                    ? "border-[#EEA62A]/60 shadow-[0_8px_40px_rgba(184,154,94,0.15)]"
+                                                    : "border-[#e8e2da] hover:border-[#EEA62A]/30 hover:shadow-[0_4px_20px_rgba(184,154,94,0.08)]"
                                                 }
                         ${inView ? "rt-fadeUp" : "opacity-0"}
                         ${isActive ? "rt-active" : ""}
@@ -367,7 +367,7 @@ export default function HotelRoomTypes() {
                                             <h3 className="rt-display text-[#1a1612] font-semibold text-[1.25rem] leading-tight mb-1">
                                                 {room.label}
                                             </h3>
-                                            <p className="text-dark text-[11px] font-light italic mb-4">
+                                            <p className="text-gray-900 text-[11px] font-light italic mb-4">
                                                 {room.tagline}
                                             </p>
 
@@ -469,7 +469,7 @@ export default function HotelRoomTypes() {
                                             {active.label}
                                         </h3>
                                     </div>
-                                    <p className="text-dark text-[11px] font-light italic mb-4">{active.tagline}</p>
+                                    <p className="text-gray-900 text-[11px] font-light italic mb-4">{active.tagline}</p>
 
                                     {/* Divider */}
                                     <div className="flex items-center gap-3 mb-5">
@@ -490,7 +490,7 @@ export default function HotelRoomTypes() {
                                         <div className="rounded-xl bg-[#faf7f3] border border-[#f0ebe4] px-4 py-3">
                                             <span className="text-[#a09080] text-[9px] font-semibold tracking-[0.18em] uppercase block mb-1">Size</span>
                                             <span className="rt-display font-bold text-[1.4rem] text-[#1a1612]">{active.size}</span>
-                                            <span className="text-dark text-[10px] ml-1">sft</span>
+                                            <span className="text-gray-900 text-[10px] ml-1">sft</span>
                                         </div>
                                         <div className="rounded-xl bg-[#faf7f3] border border-[#f0ebe4] px-4 py-3">
                                             <span className="text-[#a09080] text-[9px] font-semibold tracking-[0.18em] uppercase block mb-1">Floors</span>
@@ -567,11 +567,11 @@ export default function HotelRoomTypes() {
                                             className="w-2 h-2 rounded-full flex-shrink-0 transition-all duration-300 group-hover:scale-150"
                                             style={{ background: r.accent }}
                                         />
-                                        <span className="text-dark text-[11px] font-medium group-hover:text-[#1a1612] transition-colors duration-200">
+                                        <span className="text-gray-900 text-[11px] font-medium group-hover:text-[#1a1612] transition-colors duration-200">
                                             {r.size} sft
                                         </span>
                                         <span className="text-[#c8bdb4] text-[11px]">·</span>
-                                        <span className="text-dark text-[11px] font-light group-hover:text-[#6b5e52] transition-colors duration-200">
+                                        <span className="text-gray-900 text-[11px] font-light group-hover:text-[#6b5e52] transition-colors duration-200">
                                             {r.type}
                                         </span>
                                     </button>
@@ -586,7 +586,7 @@ export default function HotelRoomTypes() {
                 </div>
 
                 {/* Bottom glow rule */}
-                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b89a5e]/25 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#EEA62A]/25 to-transparent" />
             </section>
         </>
     );

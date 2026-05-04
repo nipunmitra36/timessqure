@@ -19,7 +19,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="w-full sticky top-0 z-50 bg-[#1a1612]/97 backdrop-blur-md border-b border-[#b89a5e]/25"
+        <header className="w-full sticky top-0 z-50 bg-[#1a1612]/97 backdrop-blur-md border-b border-[#EEA62A]/25"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
             <div className="max-w-7xl mx-auto px-6">
@@ -27,10 +27,10 @@ export default function Header() {
 
                     {/* Brand */}
                     <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
-                        <div className="w-8 h-8 border border-[#b89a5e]/60 rounded-sm flex items-center justify-center">
+                        <div className="w-8 h-8 border border-[#EEA62A]/60 rounded-sm flex items-center justify-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 1L14 5v6l-6 4L2 11V5L8 1z" stroke="#b89a5e" strokeWidth="1.2" />
-                                <path d="M8 5v6M5 6.5l3-2 3 2" stroke="#b89a5e" strokeWidth="1" strokeLinecap="round" />
+                                <path d="M8 1L14 5v6l-6 4L2 11V5L8 1z" stroke="#EEA62A" strokeWidth="1.2" />
+                                <path d="M8 5v6M5 6.5l3-2 3 2" stroke="#EEA62A" strokeWidth="1" strokeLinecap="round" />
                             </svg>
                         </div>
                         <div className="flex flex-col gap-0.5">
@@ -41,7 +41,7 @@ export default function Header() {
                                 Times Square
                             </span>
                             <span
-                                className="text-[#b89a5e] text-[9px] uppercase tracking-[0.18em] font-light"
+                                className="text-[#EEA62A] text-[9px] uppercase tracking-[0.18em] font-light"
                                 style={{ fontFamily: "'Montserrat', sans-serif" }}
                             >
                                 Premium Properties
@@ -57,7 +57,7 @@ export default function Header() {
                                 href={item.href}
                                 className="text-[11px] uppercase text-white/60 hover:text-white
                            px-3.5 h-16 flex items-center border-b-2 border-transparent
-                           hover:border-[#b89a5e] transition-all duration-200 whitespace-nowrap"
+                           hover:border-[#EEA62A] transition-all duration-200 whitespace-nowrap"
                                 style={{ fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.08em", fontWeight: 500 }}
                             >
                                 {item.label}
@@ -66,7 +66,7 @@ export default function Header() {
 
                         <Link
                             href="/book"
-                            className="ml-3 bg-[#b89a5e] hover:bg-[#d4b87a] text-[#1a1612] px-5 py-2.5
+                            className="ml-3 bg-[#EEA62A] hover:bg-[#d4b87a] text-[#1a1612] px-5 py-2.5
                          text-[10px] uppercase font-semibold rounded-sm
                          flex items-center gap-2 transition-all duration-200 hover:-translate-y-px"
                             style={{ fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.14em" }}
@@ -82,7 +82,7 @@ export default function Header() {
                     {/* Mobile Button */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="lg:hidden flex items-center gap-2 px-3 py-2 border border-[#b89a5e]/30
+                        className="lg:hidden flex items-center gap-2 px-3 py-2 border border-[#EEA62A]/30
                        text-white text-sm rounded-sm"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
@@ -92,7 +92,7 @@ export default function Header() {
 
                 {/* Mobile Menu */}
                 {isOpen && (
-                    <div className="lg:hidden pb-4 pt-2 border-t border-[#b89a5e]/20">
+                    <div className="lg:hidden pb-4 pt-2 border-t border-[#EEA62A]/20">
                         {navItems.map((item) => (
                             <Link
                                 key={item.href}
@@ -107,7 +107,7 @@ export default function Header() {
                         ))}
                         <Link
                             href="/book"
-                            className="mt-3 block text-center bg-[#b89a5e] text-[#1a1612] py-3
+                            className="mt-3 block text-center bg-[#EEA62A] text-[#1a1612] py-3
                          text-xs uppercase font-semibold rounded-sm"
                             style={{ fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.14em" }}
                             onClick={() => setIsOpen(false)}
