@@ -15,7 +15,7 @@ const images = [
         thumb: "/home/hero-1.jpg",
         category: "Exterior",
         title: "Times Square Tower",
-        desc: "32-storey iconic landmark, Tejgaon",
+        desc: "32-storey iconic landmark, Kakrail",
         span: "col-span-2 row-span-2",
     },
     {
@@ -275,7 +275,7 @@ export default function Gallery() {
                                     className={`block h-px bg-[#EEA62A] origin-left ${inView ? "g-lineGrow" : "opacity-0"}`}
                                     style={{ width: 36, animationDelay: "0.1s" }}
                                 />
-                                <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                                <span className="text-[#EEA62A] text-[16px] font-semibold tracking-[0.28em] uppercase">
                                     Visual Tour
                                 </span>
                             </div>
@@ -293,7 +293,7 @@ export default function Gallery() {
                             className={`flex items-center gap-2 ${inView ? "g-fadeIn" : "opacity-0"}`}
                             style={{ animationDelay: "0.3s" }}
                         >
-                            <span className="text-white/25 text-[11px] tracking-wider uppercase mr-1">View</span>
+                            <span className="text-white/25 text-[12px] tracking-wider uppercase mr-1">View</span>
                             <button
                                 onClick={() => setGridMode("masonry")}
                                 className={`p-2.5 rounded-lg border transition-all duration-200 ${gridMode === "masonry" ? "bg-[#EEA62A]/15 border-[#EEA62A]/50 text-[#EEA62A]" : "border-white/10 text-white/30 hover:text-white/60"}`}
@@ -318,7 +318,7 @@ export default function Gallery() {
                             <button
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
-                                className={`g-category-pill px-4 py-1.5 text-[11px] font-semibold tracking-[0.12em] uppercase rounded-full border transition-all duration-200
+                                className={`g-category-pill px-4 py-1.5 text-[12px] font-semibold tracking-[0.12em] uppercase rounded-full border transition-all duration-200
                   ${activeCategory === cat
                                         ? "active"
                                         : "border-white/12 text-white bg-transparent"
@@ -328,7 +328,7 @@ export default function Gallery() {
                             </button>
                         ))}
 
-                        <span className="ml-auto text-white/20 text-[11px] font-medium">
+                        <span className="ml-auto text-white/20 text-[12px] font-medium">
                             {filtered.length} photos
                         </span>
                     </div>
@@ -364,7 +364,7 @@ export default function Gallery() {
                                             {img.category}
                                         </span>
                                         <p className="text-white font-semibold text-sm leading-snug">{img.title}</p>
-                                        <p className="text-white/55 text-[11px] font-light mt-0.5">{img.desc}</p>
+                                        <p className="text-white/55 text-[12px]  mt-0.5">{img.desc}</p>
                                     </div>
 
                                     {/* Fullscreen icon */}
@@ -411,26 +411,6 @@ export default function Gallery() {
                         </div>
                     )}
 
-                    {/* ── Bottom CTA ── */}
-                    <div
-                        className={`flex flex-col sm:flex-row items-center justify-between gap-4 mt-14 pt-10 border-t border-white/8 ${inView ? "g-fadeUp" : "opacity-0"}`}
-                        style={{ animationDelay: "1s" }}
-                    >
-                        <div className="flex items-center gap-3">
-                            <HiOutlinePhotograph size={18} className="text-[#EEA62A]" />
-                            <span className="text-white/30 text-[12px] font-medium tracking-wide">
-                                {images.length} curated visuals of Times Square, Tejgaon
-                            </span>
-                        </div>
-
-                        {/* FIX: restored proper <a> tag — href was detached from the element */}
-                        <a
-                            href="/gallery"
-                            className="inline-flex items-center gap-2 border border-[#EEA62A]/35 hover:border-[#EEA62A] text-[#EEA62A] text-[11px] font-semibold tracking-[0.16em] uppercase px-6 py-3 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EEA62A]/8"
-                        >
-                            View Full Gallery →
-                        </a>
-                    </div>
 
                 </div>
 
@@ -476,7 +456,7 @@ export default function Gallery() {
                                 style={{ maxHeight: "72vh" }}
                             />
                             {/* Category badge */}
-                            <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1 bg-[#EEA62A] text-[#1a1612] text-[10px] font-bold tracking-[0.16em] uppercase rounded-full">
+                            <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1 bg-[#EEA62A] text-[#1a1612] text-[12px] font-bold tracking-[0.16em] uppercase rounded-full">
                                 {currentImage.category}
                             </span>
                         </div>
@@ -487,7 +467,7 @@ export default function Gallery() {
                                 <h3 className="g-display text-white font-semibold text-xl leading-snug">
                                     {currentImage.title}
                                 </h3>
-                                <p className="text-white/40 text-sm font-light mt-0.5">{currentImage.desc}</p>
+                                <p className="text-white/40 text-sm  mt-0.5">{currentImage.desc}</p>
                             </div>
 
                             {/* Dot indicators */}
@@ -506,13 +486,13 @@ export default function Gallery() {
                     {/* Prev / Next */}
                     <button
                         onClick={prevImage}
-                        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-xl border border-white/12 bg-white/5 hover:bg-[#EEA62A]/15 hover:border-[#EEA62A]/50 flex items-center justify-center text-white/50 hover:text-[#EEA62A] transition-all duration-200"
+                        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-xl border border-white/12 bg-white/5 hover:bg-[#EEA62A]/15 hover:border-[#EEA62A]/50 flex items-center justify-center text-white hover:text-[#EEA62A] transition-all duration-200"
                     >
                         <BsArrowLeft size={16} />
                     </button>
                     <button
                         onClick={nextImage}
-                        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-xl border border-white/12 bg-white/5 hover:bg-[#EEA62A]/15 hover:border-[#EEA62A]/50 flex items-center justify-center text-white/50 hover:text-[#EEA62A] transition-all duration-200"
+                        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-xl border border-white/12 bg-white/5 hover:bg-[#EEA62A]/15 hover:border-[#EEA62A]/50 flex items-center justify-center text-white hover:text-[#EEA62A] transition-all duration-200"
                     >
                         <BsArrowRight size={16} />
                     </button>

@@ -31,7 +31,7 @@ const geistMono = Geist_Mono({
 
 // Metadata
 export const metadata: Metadata = {
-  title: "Times Square - Premium Properties in Tejgaon",
+  title: "Times Square - Premium Properties in Kakrail",
   description: "Times Square",
 };
 

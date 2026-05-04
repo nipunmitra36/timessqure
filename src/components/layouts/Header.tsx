@@ -7,7 +7,7 @@ import ThemeToggle from "../theme/ThemeToggle";
 const navItems = [
     { label: "Home", href: "/" },
     { label: "About", href: "#" },
-    { label: "Location", href: "#" },
+    // { label: "Location", href: "#" },
     { label: "Floor Plans", href: "#" },
     { label: "Investment", href: "#" },
     { label: "Amenities", href: "#" },
@@ -41,7 +41,7 @@ export default function Header() {
                                 Times Square
                             </span>
                             <span
-                                className="text-[#EEA62A] text-[9px] uppercase tracking-[0.18em] font-light"
+                                className="text-[#EEA62A] text-[9px] uppercase tracking-[0.18em] "
                                 style={{ fontFamily: "'Montserrat', sans-serif" }}
                             >
                                 Premium Properties
@@ -55,7 +55,7 @@ export default function Header() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="text-[11px] uppercase text-white/60 hover:text-white
+                                className="text-[12px] uppercase text-white/80 hover:text-white
                            px-3.5 h-16 flex items-center border-b-2 border-transparent
                            hover:border-[#EEA62A] transition-all duration-200 whitespace-nowrap"
                                 style={{ fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.08em", fontWeight: 500 }}
@@ -67,7 +67,7 @@ export default function Header() {
                         <Link
                             href="/book"
                             className="ml-3 bg-[#EEA62A] hover:bg-[#d4b87a] text-[#1a1612] px-5 py-2.5
-                         text-[10px] uppercase font-semibold rounded-sm
+                         text-[12px] uppercase font-bold rounded-sm
                          flex items-center gap-2 transition-all duration-200 hover:-translate-y-px"
                             style={{ fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.14em" }}
                         >

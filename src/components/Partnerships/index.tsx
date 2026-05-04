@@ -9,8 +9,7 @@ const partners = [
         name: "Headroom",
         description:
             "Award-winning architectural and interior design firm behind the spatial vision of Times Square — from structural concept to bespoke interior detailing.",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Headroom_logo.svg/320px-Headroom_logo.svg.png",
-        logoFallback: null,
+        logo: "/home/1.png",
         accent: "#e07820",
         tag: "Architecture",
         since: "Est. 1998",
@@ -28,8 +27,7 @@ const partners = [
         name: "China State Construction",
         description:
             "One of the world's largest construction conglomerates, bringing world-class engineering precision, international grade materials, and unmatched structural execution.",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/China_State_Construction_Engineering_Corporation_logo.svg/320px-China_State_Construction_Engineering_Corporation_logo.svg.png",
-        logoFallback: null,
+        logo: "/home/2.png",
         accent: "#1a6eb5",
         tag: "Engineering",
         since: "Est. 1957",
@@ -48,8 +46,7 @@ const partners = [
         name: "Asiatic Laboratories",
         description:
             "A leading Bangladeshi conglomerate with deep roots in healthcare, hospitality, and real estate — anchoring the local expertise and operational excellence of the project.",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Asiatic_Laboratories_Ltd_Logo.png/320px-Asiatic_Laboratories_Ltd_Logo.png",
-        logoFallback: null,
+        logo: "/home/3.png",
         accent: "#EEA62A",
         tag: "Hospitality",
         since: "Est. 1972",
@@ -64,7 +61,6 @@ const partners = [
     },
 ];
 
-// Partner logo display names as SVG text fallbacks
 const logoTextMap: Record<number, { lines: string[]; color: string }> = {
     1: { lines: ["headroom"], color: "#e07820" },
     2: { lines: ["中國建築", "CHINA STATE", "CONSTRUCTION"], color: "#1a6eb5" },
@@ -91,7 +87,7 @@ function LogoBox({ partner, hovered }: { partner: typeof partners[0]; hovered: b
     const [imgError, setImgError] = useState(false);
     const text = logoTextMap[partner.id];
 
-    if (imgError || !partner.logo) {
+    if (imgError) {
         return (
             <div className="w-full h-full flex flex-col items-center justify-center gap-1 px-4">
                 {text.lines.map((line, i) => (
@@ -119,7 +115,7 @@ function LogoBox({ partner, hovered }: { partner: typeof partners[0]; hovered: b
             alt={partner.name}
             className="w-full h-full object-contain p-5"
             style={{
-                filter: hovered ? "none" : "grayscale(100%) opacity(0.4)",
+                filter: hovered ? "none" : "grayscale(100%) opacity(0.45)",
                 transition: "filter 0.4s ease",
             }}
             onError={() => setImgError(true)}
@@ -130,7 +126,6 @@ function LogoBox({ partner, hovered }: { partner: typeof partners[0]; hovered: b
 export default function Partnerships() {
     const { ref, inView } = useInView();
     const [hovered, setHovered] = useState<number | null>(null);
-    const [active, setActive] = useState<number | null>(null);
 
     return (
         <>
@@ -160,10 +155,6 @@ export default function Partnerships() {
           from { opacity:0; transform:translateY(24px) scale(0.98); }
           to   { opacity:1; transform:translateY(0) scale(1); }
         }
-        @keyframes ps-rotateSlow {
-          from { transform: rotate(0deg); }
-          to   { transform: rotate(360deg); }
-        }
         @keyframes ps-connectorPulse {
           0%, 100% { opacity: 0.15; }
           50%       { opacity: 0.5; }
@@ -187,38 +178,16 @@ export default function Partnerships() {
           transition: all 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           cursor: default;
         }
-        .ps-card:hover {
-          transform: translateY(-8px);
-        }
-        .ps-card.ps-featured {
-          transform: translateY(-6px);
-        }
-        .ps-card.ps-featured:hover {
-          transform: translateY(-14px);
-        }
+        .ps-card:hover { transform: translateY(-8px); }
+        .ps-card.ps-featured { transform: translateY(-6px); }
+        .ps-card.ps-featured:hover { transform: translateY(-14px); }
 
-        .ps-logo-box {
-          transition: all 0.35s ease;
-        }
+        .ps-logo-box { transition: all 0.35s ease; }
 
-        .ps-stat-row {
-          transition: background 0.2s ease;
-        }
-        .ps-stat-row:hover {
-          background: rgba(184,154,94,0.04);
-        }
+        .ps-stat-row { transition: background 0.2s ease; }
+        .ps-stat-row:hover { background: rgba(184,154,94,0.04); }
 
-        .ps-connector {
-          animation: ps-connectorPulse 3s ease infinite;
-        }
-
-        .ps-orbit {
-          animation: ps-rotateSlow 20s linear infinite;
-        }
-
-        .ps-tag {
-          transition: all 0.22s ease;
-        }
+        .ps-connector { animation: ps-connectorPulse 3s ease infinite; }
       `}</style>
 
             <section
@@ -235,14 +204,9 @@ export default function Partnerships() {
                 />
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#EEA62A]/30 to-transparent" />
 
-                {/* Decorative large circle — bg element */}
-                <div
-                    className="absolute right-[-200px] top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-[#EEA62A]/06 pointer-events-none"
-                    style={{ borderWidth: "1px" }}
-                />
-                <div
-                    className="absolute right-[-160px] top-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-[#EEA62A]/04 pointer-events-none"
-                />
+                {/* Decorative circles */}
+                <div className="absolute right-[-200px] top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-[#EEA62A]/06 pointer-events-none" />
+                <div className="absolute right-[-160px] top-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-[#EEA62A]/04 pointer-events-none" />
 
                 <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
@@ -257,7 +221,7 @@ export default function Partnerships() {
                                     className={`block h-px bg-[#EEA62A] origin-left ${inView ? "ps-lineGrow" : "opacity-0"}`}
                                     style={{ width: 36, animationDelay: "0.1s" }}
                                 />
-                                <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                                <span className="text-[#EEA62A] text-[13px] font-semibold tracking-[0.28em] uppercase">
                                     Strategic Alliances
                                 </span>
                             </div>
@@ -269,7 +233,7 @@ export default function Partnerships() {
                                 <span className="ps-gold-text">Partnerships</span>
                             </h2>
                             <p
-                                className={`text-gray-900 text-[13px] font-light tracking-wide mt-3 max-w-md ${inView ? "ps-fadeUp" : "opacity-0"}`}
+                                className={`text-[#7a6e65] text-[13px]  tracking-wide mt-3 max-w-md ${inView ? "ps-fadeUp" : "opacity-0"}`}
                                 style={{ animationDelay: "0.25s" }}
                             >
                                 Times Square is built on world-class expertise — global leaders in design, engineering, and hospitality united for a singular vision.
@@ -282,9 +246,9 @@ export default function Partnerships() {
                             style={{ animationDelay: "0.35s" }}
                         >
                             <span className="ps-display text-[#EEA62A] font-bold text-4xl leading-none">3</span>
-                            <span className="text-gray-900 text-[10px] font-semibold tracking-[0.2em] uppercase mt-1">Partners</span>
+                            <span className="text-[#7a6e65] text-[11px] font-semibold tracking-[0.2em] uppercase mt-1">Partners</span>
                             <div className="w-8 h-px bg-[#EEA62A]/30 my-2" />
-                            <span className="text-gray-900 text-[10px] font-medium tracking-wide">World-Class</span>
+                            <span className="text-[#7a6e65] text-[11px] font-medium tracking-wide">World-Class</span>
                         </div>
                     </div>
 
@@ -298,12 +262,12 @@ export default function Partnerships() {
                                     onMouseEnter={() => setHovered(partner.id)}
                                     onMouseLeave={() => setHovered(null)}
                                     className={`ps-card relative rounded-2xl border overflow-hidden bg-white group
-                    ${partner.featured
+                                        ${partner.featured
                                             ? "border-[#EEA62A]/50 shadow-[0_20px_70px_rgba(184,154,94,0.15)] ps-featured"
                                             : "border-[#e8e2da] hover:border-[#EEA62A]/35 hover:shadow-[0_12px_50px_rgba(184,154,94,0.1)]"
                                         }
-                    ${inView ? "ps-cardIn" : "opacity-0"}
-                  `}
+                                        ${inView ? "ps-cardIn" : "opacity-0"}
+                                    `}
                                     style={{ animationDelay: `${0.4 + i * 0.12}s` }}
                                 >
                                     {/* Top accent stripe */}
@@ -316,7 +280,7 @@ export default function Partnerships() {
                                         }}
                                     />
 
-                                    {/* Featured glow */}
+                                    {/* Featured badge */}
                                     {partner.featured && (
                                         <div
                                             className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[9px] font-bold tracking-[0.18em] uppercase z-10"
@@ -332,7 +296,7 @@ export default function Partnerships() {
 
                                     {/* Logo area */}
                                     <div
-                                        className="ps-logo-box relative h-36 flex items-center justify-center border-b transition-all duration-350"
+                                        className="ps-logo-box relative h-40 flex items-center justify-center border-b transition-all duration-350"
                                         style={{
                                             background: isHovered
                                                 ? `linear-gradient(135deg, ${partner.accent}08, ${partner.accent}04)`
@@ -340,7 +304,7 @@ export default function Partnerships() {
                                             borderColor: isHovered ? `${partner.accent}20` : "#f0ebe4",
                                         }}
                                     >
-                                        {/* Subtle corner decorations */}
+                                        {/* Corner decorations */}
                                         <div
                                             className="absolute top-3 left-3 w-4 h-4 border-t border-l rounded-tl-sm transition-colors duration-300"
                                             style={{ borderColor: isHovered ? `${partner.accent}50` : "transparent" }}
@@ -350,12 +314,12 @@ export default function Partnerships() {
                                             style={{ borderColor: isHovered ? `${partner.accent}50` : "transparent" }}
                                         />
 
-                                        <div className="w-40 h-20">
+                                        <div className="w-44 h-24">
                                             <LogoBox partner={partner} hovered={isHovered} />
                                         </div>
                                     </div>
 
-                                    {/* Content */}
+                                    {/* Card content */}
                                     <div className="p-5 sm:p-6">
                                         {/* Role + tag row */}
                                         <div className="flex items-center justify-between mb-3">
@@ -370,17 +334,17 @@ export default function Partnerships() {
                                                     {partner.icon}
                                                 </span>
                                                 <span
-                                                    className="ps-tag text-[9px] font-bold tracking-[0.18em] uppercase"
+                                                    className="text-[9px] font-bold tracking-[0.18em] uppercase"
                                                     style={{ color: partner.accent }}
                                                 >
                                                     {partner.tag}
                                                 </span>
                                             </div>
-                                            <span className="text-[#c8bdb4] text-[9px] font-light tracking-wide">{partner.since}</span>
+                                            <span className="text-[#c8bdb4] text-[9px]  tracking-wide">{partner.since}</span>
                                         </div>
 
                                         {/* Role label */}
-                                        <p className="text-gray-900 text-[10px] font-semibold tracking-[0.16em] uppercase mb-1">
+                                        <p className="text-[#7a6e65] text-[11px] font-semibold tracking-[0.16em] uppercase mb-1">
                                             {partner.role}
                                         </p>
 
@@ -390,7 +354,7 @@ export default function Partnerships() {
                                         </h3>
 
                                         {/* Description */}
-                                        <p className="text-[#7a6e65] text-[11.5px] font-light leading-relaxed mb-5">
+                                        <p className="text-[#7a6e65] text-[11.5px]  leading-relaxed mb-5">
                                             {partner.description}
                                         </p>
 
@@ -438,7 +402,6 @@ export default function Partnerships() {
                         <div className="flex items-center justify-center gap-0">
                             {partners.map((p, i) => (
                                 <div key={p.id} className="flex items-center">
-                                    {/* Node */}
                                     <div className="flex flex-col items-center gap-2">
                                         <div
                                             className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-300"
@@ -459,7 +422,6 @@ export default function Partnerships() {
                                         </span>
                                     </div>
 
-                                    {/* Connector line */}
                                     {i < partners.length - 1 && (
                                         <div className="flex items-center mx-2 sm:mx-4">
                                             <div className="flex items-center gap-1">
@@ -468,15 +430,13 @@ export default function Partnerships() {
                                                         key={di}
                                                         className="ps-connector rounded-full"
                                                         style={{
-                                                            width: "3px",
-                                                            height: "3px",
+                                                            width: "3px", height: "3px",
                                                             background: "#EEA62A",
                                                             animationDelay: `${di * 0.2}s`,
                                                         }}
                                                     />
                                                 ))}
                                             </div>
-                                            {/* Central hub */}
                                             <div className="mx-2 sm:mx-3 w-6 h-6 rounded-full border border-[#EEA62A]/40 bg-[#EEA62A]/08 flex items-center justify-center flex-shrink-0">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-[#EEA62A]/60" />
                                             </div>
@@ -486,8 +446,7 @@ export default function Partnerships() {
                                                         key={di}
                                                         className="ps-connector rounded-full"
                                                         style={{
-                                                            width: "3px",
-                                                            height: "3px",
+                                                            width: "3px", height: "3px",
                                                             background: "#EEA62A",
                                                             animationDelay: `${(di + 3) * 0.2}s`,
                                                         }}
@@ -501,12 +460,11 @@ export default function Partnerships() {
                         </div>
                     </div>
 
-                    {/* ── Quote / Mission Statement ── */}
+                    {/* ── Quote strip ── */}
                     <div
                         className={`relative rounded-3xl border border-[#e8e2da] overflow-hidden p-8 sm:p-10 lg:p-14 bg-gradient-to-br from-[#fdf9f3] to-white ${inView ? "ps-fadeUp" : "opacity-0"}`}
                         style={{ animationDelay: "0.9s" }}
                     >
-                        {/* Corner accent */}
                         <div className="absolute top-0 left-0 w-16 h-16">
                             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#EEA62A] to-transparent" />
                             <div className="absolute top-0 left-0 h-full w-[2px] bg-gradient-to-b from-[#EEA62A] to-transparent" />
@@ -517,22 +475,24 @@ export default function Partnerships() {
                         </div>
 
                         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8">
-                            {/* Large quote mark */}
-                            <div className="ps-display text-[#EEA62A]/15 font-bold leading-none flex-shrink-0 select-none"
-                                style={{ fontSize: "7rem", lineHeight: 0.8, marginTop: "-8px" }}>
+                            <div
+                                className="ps-display text-[#EEA62A]/15 font-bold leading-none flex-shrink-0 select-none"
+                                style={{ fontSize: "7rem", lineHeight: 0.8, marginTop: "-8px" }}
+                            >
                                 "
                             </div>
-
                             <div className="flex-1">
-                                <p className="ps-display text-[#1a1612] font-medium leading-relaxed mb-4"
-                                    style={{ fontSize: "clamp(1.1rem, 2vw, 1.45rem)" }}>
+                                <p
+                                    className="ps-display text-[#1a1612] font-medium leading-relaxed mb-4"
+                                    style={{ fontSize: "clamp(1.1rem, 2vw, 1.45rem)" }}
+                                >
                                     Three world-class organisations. One shared ambition — to deliver a landmark that redefines
                                     the standard for commercial and hospitality excellence in Dhaka.
                                 </p>
                                 <div className="flex items-center gap-3">
                                     <div className="h-px w-8 bg-[#EEA62A]" />
-                                    <span className="text-gray-900 text-[11px] font-semibold tracking-[0.2em] uppercase">
-                                        Times Square · Tejgaon, Dhaka
+                                    <span className="text-[#7a6e65] text-[12px] font-semibold tracking-[0.2em] uppercase">
+                                        Times Square · Kakrail, Dhaka
                                     </span>
                                 </div>
                             </div>
@@ -548,13 +508,13 @@ export default function Partnerships() {
                             {partners.map((p) => (
                                 <div key={p.id} className="flex items-center gap-2">
                                     <span className="w-2 h-2 rounded-full" style={{ background: p.accent }} />
-                                    <span className="text-gray-900 text-[11px] font-medium">{p.name}</span>
-                                    <span className="text-[#d6cfc8] text-[11px]">·</span>
-                                    <span className="text-[#b3a89e] text-[11px] font-light">{p.role}</span>
+                                    <span className="text-[#1a1612] text-[12px] font-medium">{p.name}</span>
+                                    <span className="text-[#d6cfc8] text-[12px]">·</span>
+                                    <span className="text-[#b3a89e] text-[12px] ">{p.role}</span>
                                 </div>
                             ))}
                         </div>
-                        <span className="text-[#c8bdb4] text-[11px] tracking-wide">Times Square · Tejgaon, Dhaka</span>
+                        <span className="text-[#c8bdb4] text-[12px] tracking-wide">Times Square · Kakrail, Dhaka</span>
                     </div>
                 </div>
 

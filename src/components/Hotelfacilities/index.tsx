@@ -308,7 +308,7 @@ export default function HotelFacilities() {
                                 className={`block h-px bg-[#EEA62A] origin-left ${inView ? "hf-lineGrow" : "opacity-0"}`}
                                 style={{ width: 36, animationDelay: "0.1s" }}
                             />
-                            <span className="text-[#EEA62A] text-[10px] font-semibold tracking-[0.28em] uppercase">
+                            <span className="text-[#EEA62A] text-[16px] font-semibold tracking-[0.28em] uppercase">
                                 World-Class Amenities
                             </span>
                         </div>
@@ -351,7 +351,7 @@ export default function HotelFacilities() {
                                             </span>
                                             <div>
                                                 <span
-                                                    className={`block text-[11px] font-semibold tracking-wide transition-colors duration-300 whitespace-nowrap
+                                                    className={`block text-[12px] font-semibold tracking-wide transition-colors duration-300 whitespace-nowrap
                             ${isActive ? "text-white" : "text-white"}`}
                                                 >
                                                     {f.shortName}
@@ -375,11 +375,11 @@ export default function HotelFacilities() {
                                 className="hidden lg:flex items-center gap-2 mt-6 pl-4"
                             >
                                 <span
-                                    className="hf-counter-glow w-8 h-8 rounded-full border border-[#EEA62A]/40 flex items-center justify-center text-[#EEA62A] text-[11px] font-bold"
+                                    className="hf-counter-glow w-8 h-8 rounded-full border border-[#EEA62A]/40 flex items-center justify-center text-[#EEA62A] text-[12px] font-bold"
                                 >
                                     {facilities.length}
                                 </span>
-                                <span className="text-white/25 text-[10px] font-medium tracking-wide">
+                                <span className="text-white/25 text-[12px] font-medium tracking-wide">
                                     Facilities
                                 </span>
                             </div>
@@ -403,7 +403,7 @@ export default function HotelFacilities() {
                                     >
                                         {activeFacility.tag}
                                     </span>
-                                    <span className="text-white/30 text-[11px] font-light tracking-wide">
+                                    <span className="text-white/30 text-[12px]  tracking-wide">
                                         {activeFacility.floor}
                                     </span>
                                 </div>
@@ -417,7 +417,7 @@ export default function HotelFacilities() {
                                 </h3>
 
                                 {/* Description */}
-                                <p className="text-white/55 text-[13px] sm:text-[14px] font-light leading-relaxed max-w-xl mb-7">
+                                <p className="text-white/55 text-[13px] sm:text-[14px]  leading-relaxed max-w-xl mb-7">
                                     {activeFacility.description}
                                 </p>
 
@@ -426,7 +426,7 @@ export default function HotelFacilities() {
                                     {activeFacility.details.map((d, i) => (
                                         <span
                                             key={d}
-                                            className="hf-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full text-[10px] font-semibold tracking-wide backdrop-blur-sm"
+                                            className="hf-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full text-[12px] font-semibold tracking-wide backdrop-blur-sm"
                                             style={{
                                                 background: "rgba(255,255,255,0.07)",
                                                 border: "1px solid rgba(255,255,255,0.12)",
@@ -457,7 +457,7 @@ export default function HotelFacilities() {
                                 className={`${inView ? "hf-fadeUp" : "opacity-0"}`}
                                 style={{ animationDelay: "0.5s" }}
                             >
-                                <span className="text-white/25 text-[10px] font-semibold tracking-[0.22em] uppercase block mb-4">
+                                <span className="text-white/25 text-[12px] font-semibold tracking-[0.22em] uppercase block mb-4">
                                     All Facilities
                                 </span>
                                 <div className="grid grid-cols-5 gap-2 sm:gap-3">
@@ -520,14 +520,14 @@ export default function HotelFacilities() {
                                         <span className="hf-display text-white font-bold text-2xl leading-none">
                                             {stat.value}
                                         </span>
-                                        <span className="text-white/30 text-[10px] font-medium tracking-wide mt-1">
+                                        <span className="text-[12px] font-medium tracking-wide mt-1">
                                             {stat.label}
                                         </span>
                                     </div>
                                 ))}
                             </div>
-                            <span className="text-white/20 text-[11px] tracking-wide">
-                                Times Square · Tejgaon, Dhaka
+                            <span className="text-white text-[12px] tracking-wide">
+                                Times Square · Kakrail, Dhaka
                             </span>
                         </div>
                     </div>

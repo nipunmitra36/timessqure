@@ -9,29 +9,23 @@ const slides = [
         image: "/home/hero-1.jpg",
         tag: "Premium Commercial Space",
         heading: "TIMES SQUARE DHAKA",
-        sub: "“Where Vision Rises, Business Thrives.",
+        sub: "Where Vision Rises, Business Thrives.",
     },
     {
         id: 2,
         image: "/home/hero-2.jpg",
         tag: "5-Star Hotel Investment",
-        heading: "Invest in the\nFuture of Hospitality",
+        heading: "Invest in the Future of Hospitality",
         sub: "Secured hotel share ownership with guaranteed ROI, managed by international hospitality brands in a landmark tower.",
     },
-    {
-        id: 3,
-        image: "/home/hero-3.jpg",
-        tag: "Iconic Architecture",
-        heading: "A Skyline Defining\nMasterpiece",
-        sub: "Positioned in the heart of the city, Times Square rises above the ordinary — a destination for living, working, and thriving.",
-    },
-    {
-        id: 4,
-        image: "/home/hero-4.jpg",
-        tag: "Premium Amenities",
-        heading: "Every Detail\nCrafted to Perfection",
-        sub: "From rooftop pools to fine dining, a curated collection of amenities elevates your experience at every level.",
-    },
+    // {
+    //     id: 3,
+    //     image: "/home/hero-3.jpg",
+    //     tag: "Iconic Architecture",
+    //     heading: "A Skyline Defining\nMasterpiece",
+    //     sub: "Positioned in the heart of the city, Times Square rises above the ordinary — a destination for living, working, and thriving.",
+    // },
+
 ];
 
 const DURATION = 5500;
@@ -86,29 +80,26 @@ export default function HeroSlider() {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500;600&display=swap');
         .font-display { font-family: 'Cormorant Garamond', serif; }
         .font-ui { font-family: 'Montserrat', sans-serif; }
-        @keyframes slideEnter {
-          from { clip-path: inset(0 100% 0 0); }
-          to   { clip-path: inset(0 0% 0 0); }
+
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to   { opacity: 1; }
         }
-        @keyframes slideLeave {
-          from { opacity: 1; transform: scale(1); }
-          to   { opacity: 0; transform: scale(1.04); }
-        }
-        @keyframes kenBurns {
-          from { transform: scale(1); }
-          to   { transform: scale(1.06); }
+        @keyframes fadeOut {
+          from { opacity: 1; }
+          to   { opacity: 0; }
         }
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(28px); }
           to   { opacity: 1; transform: translateY(0); }
         }
-        .anim-enter  { animation: slideEnter 1.1s cubic-bezier(0.77,0,0.18,1) forwards; }
-        .anim-leave  { animation: slideLeave 1.1s cubic-bezier(0.77,0,0.18,1) forwards; }
-        .anim-idle   { animation: kenBurns 6s ease-in-out forwards; }
-        .anim-tag    { animation: fadeUp 0.8s 0.20s both; }
-        .anim-h1     { animation: fadeUp 0.9s 0.35s both; }
-        .anim-sub    { animation: fadeUp 0.9s 0.50s both; }
-        .anim-btns   { animation: fadeUp 0.9s 0.65s both; }
+
+        .anim-enter { animation: fadeIn  1.1s cubic-bezier(0.4,0,0.2,1) forwards; }
+        .anim-leave { animation: fadeOut 1.1s cubic-bezier(0.4,0,0.2,1) forwards; }
+        .anim-tag   { animation: fadeUp 0.8s 0.20s both; }
+        .anim-h1    { animation: fadeUp 0.9s 0.35s both; }
+        .anim-sub   { animation: fadeUp 0.9s 0.50s both; }
+        .anim-btns  { animation: fadeUp 0.9s 0.65s both; }
       `}</style>
 
             <section className="font-ui relative w-full h-svh min-h-[600px] overflow-hidden bg-[#0d0b09]">
@@ -121,9 +112,7 @@ export default function HeroSlider() {
                         ? "anim-enter"
                         : isLeaving && animating
                             ? "anim-leave"
-                            : isActive
-                                ? "anim-idle"
-                                : "";
+                            : "";
 
                     return (
                         <div
@@ -166,7 +155,7 @@ export default function HeroSlider() {
                     className="absolute inset-0 z-[5] flex flex-col justify-center px-8 sm:px-16 lg:px-28 max-w-4xl"
                 >
                     {/* Tag */}
-                    <p className="anim-tag flex items-center gap-3 text-[#EEA62A] text-[10px] font-semibold tracking-[0.22em] uppercase mb-5">
+                    <p className="anim-tag flex items-center gap-3 text-[#EEA62A] text-[16px] font-semibold tracking-[0.22em] uppercase mb-5">
                         <span className="block w-8 h-px bg-[#EEA62A]" />
                         {slides[current].tag}
                     </p>
@@ -180,7 +169,7 @@ export default function HeroSlider() {
                     </h1>
 
                     {/* Subtext */}
-                    <p className="anim-sub text-white/65 font-light leading-[1.78] max-w-[480px] mb-10"
+                    <p className="anim-sub text-white  leading-[1.78] max-w-[480px] mb-10"
                         style={{ fontSize: "clamp(13px, 1.3vw, 15px)" }}
                     >
                         {slides[current].sub}
@@ -190,13 +179,13 @@ export default function HeroSlider() {
                     <div className="anim-btns flex flex-wrap items-center gap-4">
                         <Link
                             href="/book"
-                            className="inline-flex items-center gap-2 bg-[#EEA62A] hover:bg-[#d4b87a] text-[#1a1612] px-8 py-3.5 text-[11px] font-semibold tracking-[0.16em] uppercase rounded-sm transition-all duration-200 hover:-translate-y-0.5"
+                            className="inline-flex items-center gap-2 bg-[#EEA62A] hover:bg-[#d4b87a] text-[#1a1612] px-8 py-3.5 text-[12px] font-bold tracking-[0.16em] uppercase rounded-sm transition-all duration-200 hover:-translate-y-0.5"
                         >
                             Book Now <span>→</span>
                         </Link>
                         <Link
                             href="/about"
-                            className="inline-flex items-center gap-2 text-white hover:text-[#EEA62A] border border-white/30 hover:border-[#EEA62A] px-7 py-3.5 text-[11px] font-medium tracking-[0.14em] uppercase rounded-sm transition-all duration-200 hover:-translate-y-0.5"
+                            className="inline-flex items-center gap-2 text-white hover:text-[#EEA62A] border border-white/30 hover:border-[#EEA62A] px-7 py-3.5 text-[12px] font-medium tracking-[0.14em] uppercase rounded-sm transition-all duration-200 hover:-translate-y-0.5"
                         >
                             See Details <span>↗</span>
                         </Link>
@@ -221,7 +210,7 @@ export default function HeroSlider() {
 
                 {/* Bottom progress bar + counter */}
                 <div className="absolute bottom-10 left-8 sm:left-16 lg:left-28 z-[6] flex items-center gap-5">
-                    <span className="text-[11px] font-semibold tracking-[0.1em] text-white/40">
+                    <span className="text-[12px] font-semibold tracking-[0.1em] text-white/40">
                         <span className="text-white">0{current + 1}</span> / 0{slides.length}
                     </span>
                     <div className="flex items-center gap-2.5">

@@ -216,7 +216,7 @@ export default function Footer() {
 
                 {/* ── Large brand watermark ── */}
                 <div
-                    className="absolute bottom-16 left-1/2 -translate-x-1/2 text-white/[0.015] font-bold select-none pointer-events-none whitespace-nowrap"
+                    className="absolute bottom-16 left-1/2 -translate-x-1/2 text-white/[0.059] font-bold select-none pointer-events-none whitespace-nowrap"
                     style={{ fontSize: "clamp(4rem, 12vw, 10rem)", lineHeight: 1 }}
                     aria-hidden="true"
                 >
@@ -241,21 +241,21 @@ export default function Footer() {
                                 </div>
                                 <div className="flex flex-col gap-[3px]">
                                     <span
-                                        className="ft-display text-white font-bold leading-none"
+                                        className="font-montserrat text-white font-bold leading-none"
                                         style={{ fontSize: "1.55rem" }}
                                     >
                                         Times Square
                                     </span>
-                                    <span className="text-[#EEA62A] text-[9px] uppercase tracking-[0.2em] font-light">
+                                    <span className="text-[#EEA62A] text-[9px] uppercase tracking-[0.2em] ">
                                         Premium Properties
                                     </span>
                                 </div>
                             </Link>
 
                             {/* Tagline */}
-                            <p className="text-white text-[12.5px] font-light leading-[1.85] max-w-sm mb-8 tracking-wide">
+                            <p className="text-white text-[12.5px]  leading-[1.85] max-w-sm mb-8 tracking-wide">
                                 Dhaka's landmark destination for commercial excellence and
-                                hospitality — rising at the heart of Tejgaon, built for a
+                                hospitality — rising at the heart of Kakrail, built for a
                                 new generation of ambition.
                             </p>
 
@@ -290,7 +290,7 @@ export default function Footer() {
                                         aria-label={s.label}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="ft-social-btn w-9 h-9 rounded-lg border border-white/[0.1] flex items-center justify-center text-white/40"
+                                        className="ft-social-btn w-9 h-9 rounded-lg border border-white/[0.1] flex items-center justify-center text-white"
                                     >
                                         {s.icon}
                                     </a>
@@ -305,7 +305,7 @@ export default function Footer() {
                             <div className="grid grid-cols-3 gap-6">
                                 {navColumns.map((col) => (
                                     <div key={col.heading}>
-                                        <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#EEA62A] mb-4">
+                                        <p className="text-[14px] font-semibold uppercase tracking-[0.22em] text-[#EEA62A] mb-4">
                                             {col.heading}
                                         </p>
                                         <ul className="flex flex-col gap-3">
@@ -313,7 +313,7 @@ export default function Footer() {
                                                 <li key={link.href}>
                                                     <Link
                                                         href={link.href}
-                                                        className="ft-nav-link text-white text-[11px] font-light tracking-wide"
+                                                        className="ft-nav-link text-white text-[12px]  tracking-wide"
                                                         style={{ textDecoration: "none" }}
                                                     >
                                                         {link.label}
@@ -333,7 +333,7 @@ export default function Footer() {
                                 <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#EEA62A] mb-2">
                                     Stay Updated
                                 </p>
-                                <p className="text-white text-[11px] font-light mb-4 leading-relaxed">
+                                <p className="text-white text-[12px]  mb-4 leading-relaxed">
                                     Receive project updates, investment insights, and launch news.
                                 </p>
 
@@ -342,7 +342,7 @@ export default function Footer() {
                                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EEA62A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                             <polyline points="20 6 9 17 4 12" />
                                         </svg>
-                                        <span className="text-[#EEA62A] text-[11px] font-medium tracking-wide">
+                                        <span className="text-[#EEA62A] text-[12px] font-medium tracking-wide">
                                             You&apos;re subscribed. Thank you.
                                         </span>
                                     </div>
@@ -356,12 +356,12 @@ export default function Footer() {
                                             onFocus={() => setInputFocused(true)}
                                             onBlur={() => setInputFocused(false)}
                                             placeholder="your@email.com"
-                                            className="ft-newsletter-input flex-1 bg-white/[0.04] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-[11.5px] font-light placeholder:text-white/25"
+                                            className="ft-newsletter-input flex-1 bg-white/[0.04] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-[11.5px]  placeholder:text-white/25"
                                             style={{ fontFamily: "'Montserrat', sans-serif" }}
                                         />
                                         <button
                                             onClick={handleSubscribe}
-                                            className="ft-newsletter-btn bg-[#EEA62A] text-[#1a1612] rounded-xl px-4 py-3 text-[10px] font-bold uppercase tracking-[0.14em] whitespace-nowrap flex items-center gap-1.5"
+                                            className="ft-newsletter-btn bg-[#EEA62A] text-[#1a1612] rounded-xl px-4 py-3 text-[12px] font-bold uppercase tracking-[0.14em] whitespace-nowrap flex items-center gap-1.5"
                                             style={{ fontFamily: "'Montserrat', sans-serif" }}
                                         >
                                             Subscribe
@@ -412,7 +412,7 @@ export default function Footer() {
                                 href={item.href}
                                 target={item.href.startsWith("http") ? "_blank" : undefined}
                                 rel="noreferrer"
-                                className="flex items-center gap-2 text-white text-[11px] font-light tracking-wide hover:text-[#EEA62A] transition-colors duration-200"
+                                className="flex items-center gap-2 text-white text-[12px]  tracking-wide hover:text-[#EEA62A] transition-colors duration-200"
                                 style={{ textDecoration: "none" }}
                             >
                                 {item.icon}
@@ -424,9 +424,9 @@ export default function Footer() {
                     {/* ═══ BOTTOM BAR ═══ */}
                     <div className="flex flex-wrap items-center justify-between gap-4 py-5">
                         {/* Copyright */}
-                        <p className="text-white/20 text-[10.5px] font-light tracking-wide">
+                        <p className="text-white text-[12px]  tracking-wide">
                             © {currentYear}{" "}
-                            <span className="text-white">Times Square, Tejgaon.</span>{" "}
+                            <span className="text-white">Times Square, Kakrail.</span>{" "}
                             All rights reserved.
                         </p>
 
@@ -436,13 +436,13 @@ export default function Footer() {
                                 <Link
                                     key={l.href}
                                     href={l.href}
-                                    className="ft-legal-link text-white/25 text-[10px] font-light tracking-wide"
+                                    className="ft-legal-link text-white text-[12px]  tracking-wide"
                                     style={{ textDecoration: "none" }}
                                 >
                                     {l.label}
                                 </Link>
                             ))}
-                            <span className="text-white/15 text-[10px] tracking-wide">
+                            {/* <span className="text-white/15 text-[12px] tracking-wide">
                                 Designed by{" "}
                                 <a
                                     href="https://headroombd.com"
@@ -453,7 +453,7 @@ export default function Footer() {
                                 >
                                     Headroom
                                 </a>
-                            </span>
+                            </span> */}
                         </div>
                     </div>
 
